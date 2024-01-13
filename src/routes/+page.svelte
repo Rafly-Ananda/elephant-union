@@ -167,6 +167,7 @@
 
 	const onArtworkCarouselClick = (e: Event) => {
 		console.log(e.target);
+		console.log('foobar');
 	};
 
 	onMount(() => {});
