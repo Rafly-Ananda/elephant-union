@@ -2,10 +2,29 @@
 	import { onMount } from 'svelte';
 	import { EcosystemCardsCarousel } from '$lib';
 
-	// Assets Cards
+	// Assets Connecting Cards
+	import community_meetup from '$lib/assets/community-meetup.png';
+	import elephant_whispers from '$lib/assets/elephant-whispers-card.png';
+	import voluntrip from '$lib/assets/voluntrip.png';
+
+	// Assets Building Cards
 	import elephant_fest from '$lib/assets/elephant-fest.png';
 	import house_of_elephants from '$lib/assets/house-of-elephants.png';
 	import elephant_factory from '$lib/assets/elephant-factory.png';
+	import elephant_labs from '$lib/assets/elephant-labs.png';
+	import gadjah_shelter from '$lib/assets/gadjah-shelter.png';
+
+	// Assets Earning Cards
+	import alpha_call from '$lib/assets/alpha-call.png';
+	import profit_share_system from '$lib/assets/profit-share-system.png';
+	import cebb_token from '$lib/assets/cebb-token.png';
+
+	// Assets Branding Cards
+	import social_works from '$lib/assets/social-works.png';
+	import elephant_trees from '$lib/assets/elephant-trees.png';
+	import firewatch from '$lib/assets/firewatch.png';
+	import chocolearn from '$lib/assets/chocolearn.png';
+	import take_over_area from '$lib/assets/take-over-area.png';
 
 	let ecosystem_nav = ['Connecting', 'Earning', 'Building', 'Branding'];
 
@@ -31,7 +50,94 @@
 		{
 			assets: elephant_factory,
 			title: 'Elephant Factory',
+			copy: 'Focuses on maximizing technology and art innovation as a solution platform for our movement.',
+			link: ''
+		},
+		{
+			assets: elephant_labs,
+			title: 'Elephants Labs',
 			copy: 'Elephants Factory focuses on creating creative physical goods for merchandise and collections.',
+			link: ''
+		},
+		{
+			assets: gadjah_shelter,
+			title: 'Gadjah Shelter',
+			copy: 'Shelter hub for social conservators at densely populated nodes supporting national park core areas.',
+			link: ''
+		}
+	];
+
+	let connecting_cards = [
+		{
+			assets: community_meetup,
+			title: 'Community Meetup',
+			copy: 'In our first chapter, our primary focus was to connect with our relatively small but loyal holder community.',
+			link: ''
+		},
+		{
+			assets: elephant_whispers,
+			title: 'Elephant Whispers',
+			copy: 'Hear the gentle tales of these giants, their struggles, and the wonders of our efforts to protect them. ',
+			link: ''
+		},
+		{
+			assets: voluntrip,
+			title: 'Voluntrip',
+			copy: 'Volunteering activities tip for conservation through education and concrete actions for the community.',
+			link: ''
+		}
+	];
+
+	let earning_cards = [
+		{
+			assets: alpha_call,
+			title: 'Alpha Call',
+			copy: 'Bot external information seamlessly enters the Elephant Union with informativeness, security, and the ability to translate into various languagages.',
+			link: ''
+		},
+		{
+			assets: profit_share_system,
+			title: 'Profit Share Ecosystem',
+			copy: ' We are dedicated to staying open-minded in ensuring everyone involved receives a fair share of the effort, whether directly or indirectly. ',
+			link: ''
+		},
+		{
+			assets: cebb_token,
+			title: 'CEBB Token',
+			copy: 'Stands as the core priciples in our strategic guide for building this community',
+			link: ''
+		}
+	];
+
+	let branding_cards = [
+		{
+			assets: social_works,
+			title: 'Social Worksl',
+			copy: 'We engage in projects and activities to drive positive change, promote equality, and enhance well-being, embodying our commitment to social responsibility.',
+			link: ''
+		},
+		{
+			assets: elephant_trees,
+			title: 'Elephant Trees',
+			copy: 'It is committed to promoting sustainable and eco-friendly practices while conserving the natural habitat of these trees.',
+			link: ''
+		},
+		{
+			assets: firewatch,
+			title: 'Firewatch',
+			copy: 'Equipping to combat forest fires and protect our precious wildlife and environment. ',
+			link: ''
+		},
+		{
+			assets: chocolearn,
+			title: 'Chocolearn',
+			copy: 'ChochoLearn is a delightful journey of chocolate-infused education, blending joy and knowledge seamlessly.',
+			link: ''
+		},
+		{
+			assets: take_over_area,
+			title: 'Take over Area',
+			copy: "In our mission to introduce our community to the world, we've gone all out.",
 			link: ''
 		}
 	];
@@ -45,7 +151,7 @@
 	onMount(() => {});
 </script>
 
-<main class="flex flex-col items-center justify-center">
+<main class="w-full flex flex-col items-center justify-center">
 	<h1 class="text-5xl font-bold leading-[66px] font-grotesk mt-[190px]">Ecosystem</h1>
 
 	<p class="font-grotesk text-center text-xl font-light leading-8 mt-[50px]">
@@ -79,6 +185,12 @@
 	<div class="min-w-fit flex items-center justify-center gap-[30px] mt-[36px] px-[64px]">
 		{#if selectedEcosystemNav === 'Building'}
 			<EcosystemCardsCarousel assets_list={building_cards} />
+		{:else if selectedEcosystemNav === 'Connecting'}
+			<EcosystemCardsCarousel assets_list={connecting_cards} />
+		{:else if selectedEcosystemNav === 'Earning'}
+			<EcosystemCardsCarousel assets_list={earning_cards} />
+		{:else if selectedEcosystemNav === 'Branding'}
+			<EcosystemCardsCarousel assets_list={branding_cards} />
 		{:else}
 			<p class="font-grotesk font-bold">Coming soon ...</p>
 		{/if}

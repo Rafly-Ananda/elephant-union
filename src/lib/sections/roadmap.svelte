@@ -20,13 +20,93 @@
 	import line from '$lib/assets/line.svg';
 	import arrow_up_icon from '$lib/assets/arrow-up-icon.svg';
 
-	let benefits_items = [
-		benefits_art,
-		benefits_economy,
-		benefits_privillage,
-		benefits_social,
-		benefits_virtual
+	import { openModal } from 'svelte-modals';
+	import { Modal } from '$lib';
+
+	interface benefitModalContentType {
+		title: string;
+		content: string[];
+		art: string;
+	}
+
+	interface roadmapModalContentType {
+		title: string;
+		content: string;
+		link: string;
+	}
+
+	const benefit_modal_content: benefitModalContentType[] = [
+		{
+			title: 'ART',
+			content: [
+				'1 Art Digital, NFT generated Elephant Union',
+				'Physical handmade art Elephant Union from elephant tusker canvas (Raffle), free shipphing to global address.'
+			],
+			art: benefits_art
+		},
+		{
+			title: 'Economics',
+			content: ['Profit Sahre | House of Elephants @WayKambas 1 NFT = 0,001% (5 Years)'],
+			art: benefits_economy
+		},
+		{
+			title: 'Privilege in Real Life',
+			content: [
+				'Free Acces VIP Lounge at every House of Elephants (HoE)',
+				'Free Acces to all paid events whitin ecosystem & 20% discount for accomodation and FnB Elephant Union Ecosystem',
+				'Indonesian Trip (Raffle)',
+				'Africa Trip (Raffle)'
+			],
+			art: benefits_privillage
+		},
+		{
+			title: 'Virtual',
+			content: ['Avatar Character Elephant Union Members at Elephant Universe'],
+			art: benefits_virtual
+		},
+		{
+			title: 'Social',
+			content: [
+				'1 NFT = 1 Tree (Each NFT represents one tree planting)',
+				'Contributions to the Elephant Union support its social programs.'
+			],
+			art: benefits_social
+		}
 	];
+
+	const roadmap_modal_content: roadmapModalContentType[] = [
+		{
+			title: 'Chapter 1: First Step to Humanity',
+			content:
+				'We prioritize humanity initiatives in the local community, starting grassroots efforts to enhance human connections in villages surrounding Way Kambas National Park. This step aims to understand their concerns and build solutions collaboratively, ensuring each step is evaluated through routine assessments.',
+			link: ''
+		},
+		{
+			title: 'Chapter 2: Sustaining Economic Impact',
+			content:
+				"As we step into Chapter 2, our focus turns to sustaining economic impact. We envision implementing innovative strategies to ensure the longevity and prosperity of our ecosystem. This includes exploring avenues for economic sustainability, fostering partnerships, and creating opportunities for growth within our community. Together, we'll build a foundation that stands strong against the winds of change.",
+			link: ''
+		},
+		{
+			title: 'Chapter 3: Direct Action for Elephants',
+			content:
+				"Chapter 3 marks a decisive turn as we embark on direct action for elephants. We're committed to making a tangible impact on elephant conservation. Through partnerships, awareness campaigns, and on-ground initiatives, we aim to address critical challenges these magnificent creatures face. Join us in taking direct steps toward securing a better future for elephants and their habitats.",
+			link: ''
+		},
+		{
+			title: 'Chapter 4: Exploring new Horizons',
+			content:
+				"As we delve into Chapter 4, our journey extends to exploring new horizons. This phase is about embracing innovation, venturing into uncharted territories, and pushing the boundaries of what's possible. We invite you to join us in discovering fresh perspectives, forging new connections, and navigating the exciting unknowns that lie ahead. Together, we'll pioneer the next chapter of our collective journey.",
+			link: ''
+		}
+	];
+
+	function handleOpen(content: benefitModalContentType | roadmap_modal_content) {
+		openModal(Modal, {
+			title: content.title,
+			message: content.content
+		});
+	}
 </script>
 
 <div class="w-full h-screen flex justify-center bg-[#232A32]">
@@ -48,10 +128,13 @@
 		<div class="flex flex-col gap-4">
 			<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Benefits:</h4>
 			<div class="flex gap-4 hover:cursor-pointer">
-				{#each benefits_items as item, index (index + item)}
-					<div class="w-[94px] h-[94px] rounded-md bg-white flex items-center justify-center">
-						<img alt={item} src={item} />
-					</div>
+				{#each benefit_modal_content as item, index (index + item.title)}
+					<button
+						class="w-[94px] h-[94px] rounded-md bg-white flex items-center justify-center"
+						on:click={() => handleOpen(item)}
+					>
+						<img alt={item.title} src={item.art} />
+					</button>
 				{/each}
 			</div>
 
@@ -77,15 +160,22 @@
 			<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Roadmap:</h4>
 			<!-- Milestones -->
 			<div class="w-[803px] h-[302px] flex items-center justify-start gap-10 relative flex-none">
+				<!-- Milestone 1 -->
 				<div class="flex flex-col items-center justify-center gap-2 mt-[90px]">
-					<h3 class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">
+					<button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold"
+						on:click={() => handleOpen(roadmap_modal_content[0])}
+					>
 						Chapter 1
-					</h3>
-					<img
-						class="hover:cursor-pointer w-fit object-none z-10"
-						alt=" milestone-point-1"
-						src={milestone_point}
-					/>
+					</button>
+					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+						<img
+							class="hover:cursor-pointer w-fit object-none z-50"
+							alt=" milestone-point-1"
+							src={milestone_point}
+						/>
+					</button>
+
 					<img class="w-fit object-none" alt="milestone-line-1" src={line} />
 					<div
 						class="flex flex-col items-center justify-center text-[14px] text-white leading-7 font-grotesk font-medium"
@@ -97,7 +187,7 @@
 
 				<!-- Start Line -->
 				<div
-					class="h-[1px] bg-gradient-to-r from-white to-[#8A8A8A] absolute left-20 right-0"
+					class="h-[1px] bg-gradient-to-r from-white to-[#8A8A8A] absolute left-20 right-0 z-0"
 				></div>
 				<!-- End Line -->
 
@@ -109,25 +199,37 @@
 						<h3>Sustaining Economic</h3>
 						<h3>Impact (2024-2025)</h3>
 					</div>
-					<img class="w-fit object-none rotate-180" alt="milestone-line-1" src={line} />
-					<img
-						class="hover:cursor-pointer w-fit object-none z-10"
-						alt=" milestone-point-1"
-						src={milestone_glowing_point}
-					/>
-					<h3 class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">
+					<img class="w-fit object-none rotate-180" alt="milestone-line-1 z-50" src={line} />
+					<button on:click={() => handleOpen(roadmap_modal_content[1])}>
+						<img
+							class="hover:cursor-pointer w-fit object-none z-10"
+							alt=" milestone-point-1"
+							src={milestone_glowing_point}
+						/>
+					</button>
+
+					<button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold"
+						on:click={() => handleOpen(roadmap_modal_content[1])}
+					>
 						Chapter 2
-					</h3>
+					</button>
 				</div>
 
 				<!-- Milestone 3 -->
 				<div class="flex flex-col items-center justify-center gap-2 mt-[90px] text-[#8A8A8A]">
-					<h3 class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold">Chapter 3</h3>
-					<img
-						class="hover:cursor-pointer w-fit object-none z-10"
-						alt=" milestone-point-1"
-						src={milestone_dimmed_point}
-					/>
+					<button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold"
+						on:click={() => handleOpen(roadmap_modal_content[2])}>Chapter 3</button
+					>
+					<button on:click={() => handleOpen(roadmap_modal_content[1])}
+						><img
+							class="hover:cursor-pointer w-fit object-none z-50"
+							alt=" milestone-point-1"
+							src={milestone_dimmed_point}
+						/></button
+					>
+
 					<img class="w-fit object-none" alt="milestone-line-1" src={line} />
 					<div
 						class="flex flex-col items-center justify-center text-[14px] leading-7 font-grotesk font-medium"
@@ -146,12 +248,18 @@
 						<h3>Horizons</h3>
 					</div>
 					<img class="w-fit object-none rotate-180" alt="milestone-line-1" src={line} />
-					<img
-						class="hover:cursor-pointer w-fit object-none z-10 text-red-500"
-						alt=" milestone-point-1"
-						src={milestone_dimmed_point}
-					/>
-					<h3 class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold">Chapter 4</h3>
+					<button on:click={() => handleOpen(roadmap_modal_content[3])}
+						><img
+							class="hover:cursor-pointer w-fit object-none z-50"
+							alt=" milestone-point-1"
+							src={milestone_dimmed_point}
+						/></button
+					>
+
+					<button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold"
+						on:click={() => handleOpen(roadmap_modal_content[3])}>Chapter 4</button
+					>
 				</div>
 			</div>
 		</div>

@@ -14,9 +14,9 @@
 </script>
 
 <div
-	class="w-full h-full flex flex-col items-start justify-center bg-[#232A32] p-[75px] font-grotesk text-white gap-10"
+	class="w-full h-full flex flex-col items-start justify-center bg-[#232A32] p-[64px] font-grotesk text-white gap-10"
 >
-	<div class="w-full flex items-start justify-center gap-20">
+	<div class="w-full flex items-start justify-between gap-20">
 		<!-- Elephant Union -->
 		<div class="w-[322px]">
 			<img src={elephant_union_logo_footer} alt="elephant-union-footer-logo" />

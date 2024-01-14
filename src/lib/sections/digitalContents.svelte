@@ -4,7 +4,7 @@
 	import elephant_whispers_radio from '$lib/assets/elephant-whispers-radio.svg';
 </script>
 
-<div class="w-[1304px] flex h-full items-start justify-center gap-5 mt-[155px]">
+<div class="w-full px-[290px] flex h-full items-start justify-center gap-5 mt-[155px]">
 	<!-- Left Side -->
 	<div class="flex flex-col flex-none items-start justify-start w-[530px] h-fit gap-4">
 		<div class="h-[193px] flex items-center justify-between bg-[#FFD1DC] p-5 rounded-2xl">

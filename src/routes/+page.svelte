@@ -16,10 +16,13 @@
 		OurFriends,
 		PreFooter,
 		Footer,
-		Navbar
+		Navbar,
+		Modal
 	} from '$lib';
 
-	onMount(() => {});
+	import { Modals, closeModal, openModal, modals } from 'svelte-modals';
+
+	import { fade } from 'svelte/transition';
 </script>
 
 <main class="w-full h-full relative bg-[#232A32] overflow-hidden">
@@ -68,6 +71,18 @@
 		<Footer />
 	</div>
 </main>
+<Modals>
+	<div slot="backdrop" class="backdrop" transition:fade on:click={closeModal} />
+</Modals>
 
 <style lang="postcss">
+	.backdrop {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.5);
+		/* z-index: 30; */
+	}
 </style>

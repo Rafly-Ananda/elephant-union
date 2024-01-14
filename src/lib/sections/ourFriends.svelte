@@ -41,7 +41,7 @@
 	];
 </script>
 
-<div class="w-[1304px] h-full flex flex-col items-center justify-center mt-[177px]">
+<div class="w-full px-[290px] h-full flex flex-col items-center justify-center mt-[177px]">
 	<h1 class="text-5xl font-bold">Our Friends</h1>
 	<div class="w-full h-full grid grid-cols-6 gap-20 mt-[57px]">
 		{#each our_friends as item, index (item + index)}

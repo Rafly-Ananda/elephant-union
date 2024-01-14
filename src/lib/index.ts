@@ -3,6 +3,7 @@ import EcosystemCardsCarousel from './components/EcosystemCardsCarousel.svelte';
 import NftArtworkCarousel from './components/NftArtworkCarousel.svelte';
 import Navbar from './components/Navbar.svelte';
 import Marquee from './components/Marquee.svelte';
+import Modal from './components/Modal.svelte';
 
 // Sections
 import Ecosystem from './sections/ecosystem.svelte';
@@ -32,5 +33,6 @@ export {
 	EcosystemCardsCarousel,
 	NftArtworkCarousel,
 	Navbar,
-	Marquee
+	Marquee,
+	Modal
 };
