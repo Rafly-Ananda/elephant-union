@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="w-full h-full flex flex-col items-start justify-center bg-[#232A32] p-[64px] font-grotesk text-white gap-10"
+	class="w-full h-full flex flex-col items-start justify-center bg-[#232A32] p-2 md:p-[64px] font-grotesk text-white gap-10"
 >
 	<div class="w-full flex items-start justify-between gap-20">
 		<!-- Elephant Union -->
@@ -62,8 +62,8 @@
 
 	<div class="h-[2px] bg-white w-full"></div>
 
-	<div class="w-full flex items-center justify-between">
-		<div class="flex items-center justify-center gap-10">
+	<div class="flex-col w-full flex items-center justify-between border border-red-500">
+		<div class="w-full flex items-center justify-center gap-4 lg:gap-10 text-[8px]">
 			<span>&#169; 2024 Elephant Union. All rights reserved.</span>
 
 			<a href="#" class="underline">Privacy Policy</a>

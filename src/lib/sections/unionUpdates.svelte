@@ -5,13 +5,17 @@
 
 	let selectedUpdatesNav: string = 'Monthly Update';
 
+	const updateNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	const annoucementNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	const events = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 	const onUpdatesNavClick = (e: Event, target: string) => {
 		selectedUpdatesNav = target;
 	};
 </script>
 
 <div
-	class="w-full h-[80vh] flex flex-col items-center justify-start bg-[#F3F6F5] mt-[150px] pt-[100px] px-[290px] gap-10"
+	class="w-full h-[80vh] flex flex-col items-center justify-start bg-[#F3F6F5] mt-[150px] pt-[100px] px-[64px] 2xl:px-[290px] gap-10"
 >
 	<h1 class="font-grotesk text-5xl font-bold">Updates</h1>
 
