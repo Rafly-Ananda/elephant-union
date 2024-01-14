@@ -4,27 +4,31 @@
 	import elephant_whispers_radio from '$lib/assets/elephant-whispers-radio.svg';
 </script>
 
-<div class="w-full px-[290px] flex h-full items-start justify-center gap-5 mt-[155px]">
+<!--  -->
+<div
+	class="w-full h-full flex flex-col xl:flex-row items-start justify-center gap-5 mt-[50px] md:mt-[100px] lg:mt-[155px] px-6 xl:px-[64px] 2xl:px-[290px]"
+>
 	<!-- Left Side -->
-	<div class="flex flex-col flex-none items-start justify-start w-[530px] h-fit gap-4">
-		<div class="h-[193px] flex items-center justify-between bg-[#FFD1DC] p-5 rounded-2xl">
-			<div class="w-full h-full grow flex flex-col items-start justify-center gap-3">
-				<img class="object-none" src={elephant_whispers_copy} alt="elephant-whispers-copy" />
+	<div class="flex flex-col flex-none items-start justify-start w-full xl:w-[530px] h-fit gap-4">
+		<div class="w-full h-[193px] flex items-center justify-between bg-[#FFD1DC] p-5 rounded-2xl">
+			<div
+				class="w-full h-full grow flex flex-col items-start justify-center gap-1 md:gap-3 text-xs leading-none md:text-base md:leading-3
+			"
+			>
+				<img
+					class="w-2/5 md:w-fit mb-2 md:mb-0"
+					src={elephant_whispers_copy}
+					alt="elephant-whispers-copy"
+				/>
 
-				<p class="font-grotesk font-medium text-left leading-3">Explore the world of elephant</p>
-				<p class="font-grotesk font-medium text-left leading-3">
-					conservation with 'Elephant Whispers' and
-				</p>
-				<p class="font-grotesk font-medium text-left leading-3">
-					Join us on an emotional journey into
-				</p>
-				<p class="font-grotesk font-medium text-left leading-3">
-					conservation's heart and nature's marvel
-				</p>
+				<p class="font-grotesk font-medium text-left">Explore the world of elephant</p>
+				<p class="font-grotesk font-medium text-left">conservation with 'Elephant Whispers' and</p>
+				<p class="font-grotesk font-medium text-left">Join us on an emotional journey into</p>
+				<p class="font-grotesk font-medium text-left">conservation's heart and nature's marvel</p>
 			</div>
 
 			<img
-				class="grow-0 w-[45%] h-full object-none"
+				class="grow-0 w-3/5 lg:w-[45%] h-full object-fit"
 				src={elephant_whispers_radio}
 				alt="elephant-whispers-radio"
 			/>
@@ -42,7 +46,7 @@
 		></iframe>
 	</div>
 	<!-- Right Side -->
-	<div class="w-full h-[361px]">
+	<div class="w-full h-[261px] md:h-[361px]">
 		<iframe
 			class="w-full h-full"
 			src="https://www.youtube.com/embed/SHj2kJzVi_g"

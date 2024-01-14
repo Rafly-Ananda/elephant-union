@@ -48,12 +48,6 @@
 			link: ''
 		},
 		{
-			assets: elephant_factory,
-			title: 'Elephant Factory',
-			copy: 'Focuses on maximizing technology and art innovation as a solution platform for our movement.',
-			link: ''
-		},
-		{
 			assets: elephant_labs,
 			title: 'Elephants Labs',
 			copy: 'Elephants Factory focuses on creating creative physical goods for merchandise and collections.',
@@ -151,25 +145,25 @@
 	onMount(() => {});
 </script>
 
-<main class="w-full flex flex-col items-center justify-center">
-	<h1 class="text-5xl font-bold leading-[66px] font-grotesk mt-[190px]">Ecosystem</h1>
+<main class="w-full p-6 flex flex-col items-center justify-center mt-[100px] lg:mt-[190px]">
+	<h1 class="text-2xl md:text-4xl lg:text-5xl font-bold font-grotesk">Ecosystem</h1>
 
-	<p class="font-grotesk text-center text-xl font-light leading-8 mt-[50px]">
+	<p
+		class="font-grotesk text-center font-light text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px]"
+	>
 		<span class="font-medium">!CEBB</span> stands as the core principles in our strategic guide for building
 		this community
 	</p>
 
 	<!-- Ecosystem Navigation -->
-	<div>
-		<div class="flex items-center justify-evenly gap-[150px] mt-[36px]">
+	<div class="w-full md:p-[64px]">
+		<div class="flex items-center justify-evenly lg:gap-[150px] mt-[36px]">
 			{#each ecosystem_nav as item, index (index + item)}
 				<!-- Temporary -->
 				<button
 					class={` ${
-						item === selectedEcosystemNav
-							? 'nav_active'
-							: 'flex items-center justify-center p-3 font-bold font-grotesk text-3xl text-[#84807b]'
-					}`}
+						item === selectedEcosystemNav ? 'bg-[#00df8e] text-black' : 'text-[#84807b]'
+					} flex items-center justify-center p-1 md:p-2 lg:p-3 font-bold font-grotesk text-sm md:text-xl lg:text-3xl rounded-md`}
 					on:click={(e) => {
 						onEcosystemNavClick(e, item);
 					}}
@@ -182,7 +176,7 @@
 	</div>
 
 	<!-- Ecosystem Cards -->
-	<div class="min-w-fit flex items-center justify-center gap-[30px] mt-[36px] px-[64px]">
+	<div class=" h-full flex items-center justify-center gap-[30px] mt-[36px] lg:px-[64px]">
 		{#if selectedEcosystemNav === 'Building'}
 			<EcosystemCardsCarousel assets_list={building_cards} />
 		{:else if selectedEcosystemNav === 'Connecting'}

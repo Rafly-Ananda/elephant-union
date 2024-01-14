@@ -14,7 +14,7 @@
 	let slider: Splide;
 </script>
 
-<h1 class="text-5xl font-bold leading-[66px] font-grotesk">(Why) are we here:</h1>
+<h1 class="text-2xl md:text-4xl lg:text-5xl font-bold font-grotesk">(Why) are we here:</h1>
 
 <!-- Carousel Track -->
 <div class="w-full flex items-center justify-center h-[207px] bg-[#F3F6F5] mt-[80px] p-[64px]">
@@ -82,7 +82,9 @@
 	</Splide>
 </div>
 
-<p class="font-grotesk text-center text-xl font-medium leading-8 mt-[80px]">
+<p
+	class="font-grotesk text-center text-base md:text-lg lg:text-xl font-medium leading-6 lg:leading-8 mt-[40px] md:mt-[80px] p-6"
+>
 	<q>We are here to make your day a little bit better with our distinctive creative of things!</q>
 </p>
 

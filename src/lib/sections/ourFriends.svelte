@@ -42,12 +42,12 @@
 </script>
 
 <div
-	class="w-full px-[64px] 2xl:px-[290px] h-full flex flex-col items-center justify-center mt-[177px]"
+	class="w-full px-6 2xl:px-[290px] h-full flex flex-col items-center justify-center mt-10 md:mt-[100px] lg:mt-[177px]"
 >
-	<h1 class="text-5xl font-bold">Our Friends</h1>
-	<div class="w-full h-full grid grid-cols-6 gap-20 mt-[57px]">
+	<h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">Our Friends</h1>
+	<div class="w-full h-full grid grid-cols-6 gap-2 lg:gap-20 mt-5 lg:mt-[57px]">
 		{#each our_friends as item, index (item + index)}
-			<div class=" flex items-center justify-center">
+			<div class="flex items-center justify-center">
 				<img src={item} alt={item} />
 			</div>
 		{/each}

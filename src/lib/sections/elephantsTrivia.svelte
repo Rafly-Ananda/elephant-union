@@ -28,7 +28,7 @@
 </script>
 
 <div
-	class="w-full flex h-full items-start justify-center gap-5 mt-[155px] pl-[290px] overflow-scroll"
+	class="w-full flex h-full items-start justify-center gap-5 mt-[155px] pl-[290px] overflow-hidden"
 >
 	<!-- Left Side -->
 	<div class="flex flex-col flex-none items-start justify-start w-[450px] h-fit gap-4">

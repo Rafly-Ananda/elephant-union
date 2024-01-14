@@ -42,7 +42,9 @@
 	<!-- <div class="w-full h-screen flex flex-col"> -->
 
 	<!-- Beige Section -->
-	<div class="w-full h-full bg-[#F4EDE3] flex flex-col items-center justify-start pt-24">
+	<div
+		class="w-full h-full bg-[#F4EDE3] flex flex-col items-center justify-start pt-10 md:pt-14 lg:pt-24"
+	>
 		<!-- Main (Why) are we here Content -->
 		<WhyAreWeHere />
 
