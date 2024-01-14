@@ -5,32 +5,8 @@
 * {
 	min-width: 0;
 	box-sizing: border-box;
-}
-
-.marquee {
-	background-color: #00df8e;
-	position: relative;
-	height: 90px;
-	overflow-x: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.track {
-	position: absolute;
-	white-space: nowrap;
-	will-change: transform;
-	animation: marquee 32s linear infinite;
-}
-
-@keyframes marquee {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-50%);
-	}
+	margin: 0;
+	padding: 0;
 }
 
 .nav_active {
@@ -50,4 +26,12 @@
 	font-size: 1.125rem /* 18px */;
 	line-height: 1.75rem /* 28px */;
 	font-weight: 500;
+}
+
+.border-red {
+	border: 2px solid red;
+}
+
+.border-blue {
+	border: 2px solid blue;
 }
