@@ -37,7 +37,7 @@
 		<iframe
 			title="spotify-gadjah-whispers-podcast-player"
 			style="border-radius:12px"
-			src="https://open.spotify.com/embed/track/4CvYHgcpBFbefsz6Q55ID1?utm_source=generator"
+			src="https://open.spotify.com/embed/playlist/0XmOD9n1ujEfGn2vgO0pby?si=-GI69HMKThqR2YPNazuQDQ&pi=a-ST0t4pHGTTih"
 			width="100%"
 			height="152"
 			frameBorder="0"
@@ -47,10 +47,19 @@
 	</div>
 	<!-- Right Side -->
 	<div class="w-full h-[261px] md:h-[361px]">
-		<iframe
-			class="w-full h-full"
+		<!-- <iframe
+			class="w-full h-full rounded-xl"
 			src="https://www.youtube.com/embed/SHj2kJzVi_g"
 			title="Raisa - Kali Kedua (Official Music Video)"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		></iframe> -->
+
+		<iframe
+			class="w-full h-full rounded-xl"
+			src="https://www.youtube.com/embed/Yich12ZEl-Y"
+			title="ELEPHANT UNION IS COMING"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			allowfullscreen

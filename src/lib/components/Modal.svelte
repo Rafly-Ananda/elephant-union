@@ -8,12 +8,16 @@
 	export let message: object | string;
 
 	onMount(() => {
-		console.log(title.includes('Chapter'));
+		if (typeof message === 'object' && message !== null) {
+			// If it's an object, cast it to an array if possible
+			const messageArray = Array.isArray(message) ? message : [message];
+			message = messageArray;
+		}
 	});
 </script>
 
 {#if isOpen}
-	<div role="dialog" class="modal" transition:fade|global>
+	<div role="dialog" class="modal p-6" transition:fade|global>
 		<!-- If true that means it is for roadmap else for benefits -->
 		{#if title.includes('Chapter')}
 			<div

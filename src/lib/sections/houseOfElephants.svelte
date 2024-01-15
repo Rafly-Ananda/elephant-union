@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { Splide } from '@splidejs/svelte-splide';
-
 	import { Marquee, NftArtworkCarousel } from '$lib';
-
-	import arrow_left from '$lib/assets/arrow-left.svg';
-	import arrow_right from '$lib/assets/arrow-right.svg';
 
 	// House of Elephants
 	import hoe_way_kambas from '$lib/assets/hoe-way-kambas.png';
@@ -13,26 +8,31 @@
 	import hoe_tangkahan from '$lib/assets/hoe-tangkahan.png';
 	import hoe_tesso_nilo from '$lib/assets/hoe-tesso-nilo.png';
 
+	import showcase_4 from '$lib/assets/gadjah-showcase-4.png';
+
 	let hoe_items = [hoe_way_kambas, hoe_bandung, hoe_bali, hoe_tangkahan, hoe_tesso_nilo];
 </script>
 
-<div class="w-full h-screen flex flex-col">
+<div class="w-full h-full flex flex-col">
 	<!-- Marquee -->
 	<Marquee />
 
 	<!-- Badges -->
-	<div class="flex items-center justify-center">
-		<div class=" mt-20 w-max flex items-center justify-center hover:cursor-pointer flex-none">
-			{#each hoe_items as item, index (index + item)}
-				<img class="w-full h-full object-none" alt={item} src={item} />
-			{/each}
-		</div>
+
+	<div
+		class="w-full h-full flex items-center justify-center flex-wrap lg:flex-nowrap mt-5 md:mt-20 hover:cursor-pointer"
+	>
+		{#each hoe_items as item, index (index + item)}
+			<img class="w-1/3 lg:w-full lg:h-full md:object-none" alt={item} src={item} />
+		{/each}
 	</div>
 
 	<!-- Artwork Showcase -->
-	<div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+	<div
+		class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden p-6 md:p-[64px]"
+	>
 		<div
-			class=" w-full h-max flex flex-col items-start justify-start hover:cursor-pointer gap-[22px] absolute -right-44"
+			class=" w-full h-full flex flex-col items-start justify-start hover:cursor-pointer gap-[22px] -right-6 md:-right-44"
 		>
 			<NftArtworkCarousel />
 		</div>

@@ -20,7 +20,7 @@
 		<!-- Elephant Union -->
 		<div class=" w-full flex flex-col items-center lg:block justify-center lg:w-[322px]">
 			<img class="w-2/4" src={elephant_union_logo_footer} alt="elephant-union-footer-logo" />
-			<p class="font-light text-sm mt-5">
+			<p class="font-light text-sm mt-5 text-center lg:text-left">
 				Real-world Web3 bridges economy, biodiversity, and tourism for meaningfull purposes for
 				Elephant Conservation.
 			</p>
@@ -65,7 +65,9 @@
 	<div class="h-[2px] bg-white w-full"></div>
 
 	<div class="w-full flex-col gap-4 lg:flex-row flex items-center justify-between">
-		<div class="w-full flex items-center justify-center gap-4 text-xs lg:gap-10 lg:text-base">
+		<div
+			class="w-full flex items-center justify-center md:justify-start gap-4 text-xs lg:gap-10 lg:text-base"
+		>
 			<span>&#169; 2024 Elephant Union. All rights reserved.</span>
 
 			<a href="#" class="underline">Privacy Policy</a>

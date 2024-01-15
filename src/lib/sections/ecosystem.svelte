@@ -145,8 +145,8 @@
 	onMount(() => {});
 </script>
 
-<main class="w-full p-6 flex flex-col items-center justify-center mt-[100px] lg:mt-[190px]">
-	<h1 class="text-2xl md:text-4xl lg:text-5xl font-bold font-grotesk">Ecosystem</h1>
+<main class="w-full p-6 flex flex-col items-center justify-center mt-[20px] lg:mt-[120px]">
+	<h1 class="text-2xl md:text-4xl lg:text-6xl font-bold font-grotesk">Ecosystem</h1>
 
 	<p
 		class="font-grotesk text-center font-light text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px]"

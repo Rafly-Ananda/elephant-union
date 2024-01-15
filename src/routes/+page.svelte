@@ -30,8 +30,8 @@
 	<Navbar />
 
 	<!-- Hero Image -->
-	<div class="w-full h-screen bg-center bg-no-repeat bg-cover">
-		<img class="w-full h-full object-fill" alt="Hero logo" src={hero} />
+	<div class="w-full h-screen">
+		<img class="w-full h-full object-cover rounded-b-2xl" alt="Hero logo" src={hero} />
 	</div>
 
 	<!-- Union Collectibles -->
@@ -39,7 +39,6 @@
 
 	<!-- House of Elephants -->
 	<HouseOfElephants />
-	<!-- <div class="w-full h-screen flex flex-col"> -->
 
 	<!-- Beige Section -->
 	<div

@@ -109,11 +109,13 @@
 	}
 </script>
 
-<div class="w-full h-screen flex justify-center bg-[#232A32]">
+<div
+	class="w-full h-full flex flex-col xl:flex-row justify-center bg-[#232A32] items-start lg:px-[64px] lg:py-20"
+>
 	<!-- Left Side -->
-	<div class="w-full h-full flex flex-col items-start justify-center gap-10 pt-10 px-16">
-		<div class="w-max flex justify-start">
-			<img class="object-none" alt="Union Collectibles" src={union_collectibles} />
+	<div class="w-full h-full flex flex-col items-center justify-center gap-4 md:items-start">
+		<div class=" flex justify-start">
+			<img class="w-fit object-none" alt="Union Collectibles" src={union_collectibles} />
 			<img
 				class="w-fit object-none"
 				alt="Union Collectibles Typography"
@@ -121,16 +123,16 @@
 			/>
 		</div>
 
-		<div class="w-max">
-			<img class=" object-none" alt="Collectibles Copy" src={copy_collectibles} />
-		</div>
+		<h1 class=" text-white font-bold text-4xl lg:text-6xl text-center lg:text-left lg:w-4/5">
+			Discover, Collect NFT and <span class="text-[#00DF8E]">become a member</span>
+		</h1>
 
-		<div class="flex flex-col gap-4">
-			<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Benefits:</h4>
-			<div class="flex gap-4 hover:cursor-pointer">
+		<div class="flex flex-col items-center md:items-start gap-4">
+			<h4 class="text-lg md:text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Benefits:</h4>
+			<div class="flex gap-2 hover:cursor-pointer">
 				{#each benefit_modal_content as item, index (index + item.title)}
 					<button
-						class="w-[94px] h-[94px] rounded-md bg-white flex items-center justify-center"
+						class="w-full h-full rounded-md bg-white flex items-center justify-center"
 						on:click={() => handleOpen(item)}
 					>
 						<img alt={item.title} src={item.art} />
@@ -138,138 +140,176 @@
 				{/each}
 			</div>
 
-			<div class="w-[454px]">
-				<p class="text-[16px] text-justify font-light font-grotesk text-white">
+			<div class="w-full lg:w-2/4">
+				<p class=" text-sm lg:text-base text-justify font-light font-grotesk text-white">
 					In this Elephant Union collection, our focus is to transform these NFTs into utility
 					members for participants in our mission. From privileges to economic benefits.
 				</p>
 			</div>
 
-			<div class="flex items-center justify-around rounded-lg w-[394px] h-[55px] bg-white">
+			<div class="flex items-center justify-around rounded-lg w-fit bg-white p-2">
 				<div class="flex items-center justify-center gap-2">
-					<p class="font-grotesk text-[12px]">Listing on:</p>
-					<img alt="Algorand" src={algorand_logo} />
+					<p class="font-grotesk text-xs">Listing on:</p>
+					<img alt="Algorand" class="w-2/5" src={algorand_logo} />
 				</div>
-				<button class="w-[180px] h-[40px] bg-[#00DF8E] rounded-lg"> Mint Now </button>
+				<button class=" px-6 py-1 bg-[#00DF8E] rounded-lg text-sm font-medium"> Mint Now </button>
 			</div>
 		</div>
 	</div>
+
 	<!-- Right Side -->
-	<div class="w-full flex flex-col items-center justify-center">
-		<div class="w-full flex items-center justify-center gap-10">
-			<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Roadmap:</h4>
-			<!-- Milestones -->
-			<div class="w-[803px] h-[302px] flex items-center justify-start gap-10 relative flex-none">
-				<!-- Milestone 1 -->
-				<div class="flex flex-col items-center justify-center gap-2 mt-[90px]">
+	<div class="w-full h-full flex flex-col items-center justify-center lg:h-2/4 lg:w-2/4">
+		<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Roadmap:</h4>
+		<div class="w-full h-full mt-5">
+			<div class="w-full h-full flex flex-col items-center justify-start relative">
+				<div class="w-full h-[95%] bottom-0 absolute">
+					<!-- Centered Child Div -->
+					<div
+						id="child"
+						class="w-[1px] h-full bg-gradient-to-r from-white to-[#8A8A8A] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+					></div>
+					<!-- End Line -->
+				</div>
+
+				<!-- #Start Milestone 1 -->
+				<div class="w-full relative">
+					<div class="absolute w-2/4 h-full left-0">
+						<div
+							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
+						></div>
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						></div>
+
+						<div class="w-2/4 h-full flex items-center justify-center absolute left-0 pr-2">
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								Sustaining Economic Impact (2024-2025)
+							</h3>
+						</div>
+					</div>
+
+					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+						<img
+							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							alt=" milestone-point-1 "
+							src={milestone_point}
+						/>
+					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-1/2 lg:left-48 transform -translate-y-1/2 right-0"
 						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
 						Chapter 1
 					</button>
+				</div>
+				<!-- /End Milestone 1 -->
+
+				<!-- #Start Milestone 2 -->
+				<div class="w-full relative mt-32">
+					<div class="absolute w-2/4 h-full right-0">
+						<div
+							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
+						></div>
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						></div>
+
+						<div class="w-2/4 h-full flex items-center justify-center absolute right-0 pl-2">
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								Sustaining Economic Impact (2024-2025)
+							</h3>
+						</div>
+					</div>
+
 					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
 						<img
-							class="hover:cursor-pointer w-fit object-none z-50"
-							alt=" milestone-point-1"
+							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							alt=" milestone-point-1 "
 							src={milestone_point}
 						/>
 					</button>
-
-					<img class="w-fit object-none" alt="milestone-line-1" src={line} />
-					<div
-						class="flex flex-col items-center justify-center text-[14px] text-white leading-7 font-grotesk font-medium"
-					>
-						<h3>First Step to Humanity</h3>
-						<h3>(2022-2023)</h3>
-					</div>
-				</div>
-
-				<!-- Start Line -->
-				<div
-					class="h-[1px] bg-gradient-to-r from-white to-[#8A8A8A] absolute left-20 right-0 z-0"
-				></div>
-				<!-- End Line -->
-
-				<!-- Milestone 2 -->
-				<div class="flex flex-col items-center justify-center gap-2 mb-[90px]">
-					<div
-						class="flex flex-col items-center justify-center text-[14px] text-white leading-7 font-grotesk font-medium"
-					>
-						<h3>Sustaining Economic</h3>
-						<h3>Impact (2024-2025)</h3>
-					</div>
-					<img class="w-fit object-none rotate-180" alt="milestone-line-1 z-50" src={line} />
-					<button on:click={() => handleOpen(roadmap_modal_content[1])}>
-						<img
-							class="hover:cursor-pointer w-fit object-none z-10"
-							alt=" milestone-point-1"
-							src={milestone_glowing_point}
-						/>
-					</button>
-
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold"
-						on:click={() => handleOpen(roadmap_modal_content[1])}
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-1/2 lg:right-44"
+						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
 						Chapter 2
 					</button>
 				</div>
+				<!-- /End Milestone 2 -->
 
-				<!-- Milestone 3 -->
-				<div class="flex flex-col items-center justify-center gap-2 mt-[90px] text-[#8A8A8A]">
-					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold"
-						on:click={() => handleOpen(roadmap_modal_content[2])}>Chapter 3</button
-					>
-					<button on:click={() => handleOpen(roadmap_modal_content[1])}
-						><img
-							class="hover:cursor-pointer w-fit object-none z-50"
-							alt=" milestone-point-1"
-							src={milestone_dimmed_point}
-						/></button
-					>
+				<!-- #Start Milestone 3 -->
+				<div class="w-full relative mt-32">
+					<div class="absolute w-2/4 h-full left-0">
+						<div
+							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
+						></div>
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						></div>
 
-					<img class="w-fit object-none" alt="milestone-line-1" src={line} />
-					<div
-						class="flex flex-col items-center justify-center text-[14px] leading-7 font-grotesk font-medium"
-					>
-						<h3>Direct Action for</h3>
-						<h3>Elephants</h3>
+						<div class="w-2/4 h-full flex items-center justify-center absolute left-0 pr-2">
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								Direct Actions for Elephants
+							</h3>
+						</div>
 					</div>
-				</div>
 
-				<!-- Milestone 4 -->
-				<div class="flex flex-col items-center justify-center gap-2 mb-[90px] text-[#8A8A8A]">
-					<div
-						class="flex flex-col items-center justify-center text-[14px] leading-7 font-grotesk font-medium"
-					>
-						<h3>Exploring new</h3>
-						<h3>Horizons</h3>
-					</div>
-					<img class="w-fit object-none rotate-180" alt="milestone-line-1" src={line} />
-					<button on:click={() => handleOpen(roadmap_modal_content[3])}
-						><img
-							class="hover:cursor-pointer w-fit object-none z-50"
-							alt=" milestone-point-1"
-							src={milestone_dimmed_point}
-						/></button
-					>
-
+					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+						<img
+							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							alt=" milestone-point-1 "
+							src={milestone_glowing_point}
+						/>
+					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk font-bold"
-						on:click={() => handleOpen(roadmap_modal_content[3])}>Chapter 4</button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-1/2 transform -translate-y-1/2 right-0 lg:left-44"
+						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
+						Chapter 3
+					</button>
 				</div>
+				<!-- /End Milestone 3 -->
+
+				<!-- #Start Milestone 4 -->
+				<div class="w-full relative mt-32">
+					<div class="absolute w-2/4 h-full right-0">
+						<div
+							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
+						></div>
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						></div>
+
+						<div class="w-2/4 h-full flex items-center justify-center absolute right-0 pl-2">
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								Exploring New Horizons
+							</h3>
+						</div>
+					</div>
+
+					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+						<img
+							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							alt=" milestone-point-1 "
+							src={milestone_point}
+						/>
+					</button>
+					<button
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-1/2 lg:right-44"
+						on:click={() => handleOpen(roadmap_modal_content[0])}
+					>
+						Chapter 4
+					</button>
+				</div>
+				<!-- /End Milestone 4 -->
 			</div>
 		</div>
-		<div class="flex items-center justify-center pl-40">
-			<h4 class="text-[16px] font-light leading-7 text-white">
+		<div class="flex items-center justify-center mt-10">
+			<h4 class="text-[16px] font-light leading-7 text-white text-center">
 				We have Encyclopedia (Whitepaper) too, on <span class="font-bold text-[#00DF8E] underline"
-					>GitBook
+					>GitBook <img class="inline-block" alt="arrow-up-icon" src={arrow_up_icon} />
 				</span>
 			</h4>
-			<img alt="arrow-up-icon" src={arrow_up_icon} />
 		</div>
 	</div>
 </div>

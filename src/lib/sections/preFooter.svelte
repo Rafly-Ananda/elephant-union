@@ -4,8 +4,10 @@
 	import arrow_up_white from '$lib/assets/arrow-up-white.svg';
 </script>
 
-<div class="w-full h-[250px] lg:h-full mt-[123px] flex items-center justify-center relative">
-	<img class="w-full h-full" src={footer_artwork} alt="footer-artwork" />
+<div
+	class="w-full h-[250px] lg:h-full mt-[50px] md:mt-[123px] flex items-center justify-center relative"
+>
+	<img class="w-full h-full object-cover" src={footer_artwork} alt="footer-artwork" />
 
 	<div class="w-full p-[64px] absolute flex flex-col lg:flex-row">
 		<!-- Left Side -->

@@ -12,71 +12,27 @@
 	const why_are_we_here_assets = [why_1, why_2, why_3, why_4, why_5];
 
 	let slider: Splide;
+
+	const options: Options = {
+		rewind: true,
+		type: 'loop',
+		perMove: 1,
+		perPage: 5,
+		focus: 'center',
+		gap: '1rem',
+		pagination: false,
+		arrows: false
+	};
 </script>
 
-<h1 class="text-2xl md:text-4xl lg:text-5xl font-bold font-grotesk">(Why) are we here:</h1>
+<h1 class="text-2xl md:text-4xl lg:text-6xl font-bold font-grotesk">(Why) are we here:</h1>
 
 <!-- Carousel Track -->
-<div class="w-full flex items-center justify-center h-[207px] bg-[#F3F6F5] mt-[80px] p-[64px]">
-	<!-- <Splide
-        options={{
-            rewind: true,
-            type: 'loop',
-            perMove: 1,
-            perPage: 5,
-            focus: 'center',
-            gap: '2rem',
-            pagination: false
-        }}
-        on:focus={(e) => {
-            console.log(e);
-        }}
-        bind:this={slider_why}
-        on:moved={(e) => {
-            const slideDetails = e?.detail;
-
-            if (slideDetails) {
-                const slidesList = slideDetails.splide.Components.Elements.slides;
-                const visibleAtIndex = slideDetails.index;
-
-                slidesList[visibleAtIndex - 1].children[0].classList.remove('border-red');
-
-                slidesList[visibleAtIndex].children[0].classList.add('border-red');
-            }
-        }}
-    >
-        {#each why_are_we_here_assets as item, index (index + item)}
-            <SplideSlide class="border border-red-500">
-                <div class="w-[426px] h-[276px]">
-                    <img class="w-full h-full object-contain rounded-3xl" alt={item} src={item} />
-                </div>
-
-                <img class="w-[800px] h-[340px] rounded-2xl object-none" alt={item} src={item} />
-            </SplideSlide>
-        {/each}
-    </Splide> -->
-
-	<Splide
-		options={{
-			rewind: true,
-			type: 'loop',
-			perMove: 1,
-			perPage: 5,
-			focus: 'center',
-			gap: '2rem',
-			pagination: false
-		}}
-		bind:this={slider}
-	>
+<div class=" w-[1500px] md:w-[2500px] mt-10 md:mt-[80px] px-[64px]">
+	<Splide {options} bind:this={slider} class="">
 		{#each why_are_we_here_assets as item, index (index + item)}
 			<SplideSlide>
-				<!-- <div
-                    class="w-[589px] h-[340px] p-1 rounded-md flex items-center justify-center object-none"
-                >
-                    
-                </div> -->
-
-				<img class="w-full h-full object-contain rounded-2xl" alt={item} src={item} />
+				<img class="rounded-md" src={item} alt={'asd'} />
 			</SplideSlide>
 		{/each}
 	</Splide>

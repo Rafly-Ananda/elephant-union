@@ -8,30 +8,3 @@
 	margin: 0;
 	padding: 0;
 }
-
-.nav_active {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 12px;
-	background-color: #00df8e;
-	font-weight: 700;
-	border-radius: 0.5rem /* 8px */;
-	font-size: 1.875rem /* 30px */;
-	line-height: 2.25rem /* 36px */;
-}
-
-.update_nav_active {
-	color: #00df8e;
-	font-size: 1.125rem /* 18px */;
-	line-height: 1.75rem /* 28px */;
-	font-weight: 500;
-}
-
-.border-red {
-	border: 2px solid red;
-}
-
-.border-blue {
-	border: 2px solid blue;
-}

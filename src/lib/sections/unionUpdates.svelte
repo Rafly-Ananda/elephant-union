@@ -15,9 +15,9 @@
 </script>
 
 <div
-	class="w-full md:h-full lg:h-[80vh] flex flex-col items-center justify-start md:mt-20 bg-[#F3F6F5] lg:mt-[150px] py-10 px-6 md:px-[64px] 2xl:px-[290px] gap-10"
+	class="w-full md:h-full lg:h-[80vh] flex flex-col items-center justify-start md:mt-20 bg-[#F3F6F5] lg:mt-[150px] py-10 px-6 md:px-[64px] 2xl:px-[290px] gap-10 lg:py-20"
 >
-	<h1 class="font-grotesk text-2xl md:text-4xl lg:text-5xl font-bold">Updates</h1>
+	<h1 class="font-grotesk text-2xl md:text-4xl lg:text-6xl font-bold">Updates</h1>
 
 	<div class="w-full flex flex-col lg:flex-row items-center bg-white rounded-2xl">
 		<div class="w-full h-full">
@@ -52,7 +52,7 @@
 					<button
 						class={`${
 							item % 2 === 0 ? 'bg-[#FFF]' : 'bg-[#F2F3F2]'
-						} h-[60px] p-3 block w-full text-left hover:bg-[#bfc0bf]`}
+						} h-[50px] md:h-[60px] p-2 md:p-3 text-xs md:text-base block w-full text-left hover:bg-[#bfc0bf]`}
 					>
 						Coming Soon
 					</button>

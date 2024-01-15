@@ -20,7 +20,14 @@
 		perMove: 1,
 		perPage: 6,
 		arrows: false,
-		pagination: false
+		pagination: false,
+		autoWidth: true,
+		gap: '2rem',
+		breakpoints: {
+			640: {
+				gap: '0.5rem'
+			}
+		}
 	};
 
 	let slider: Splide;
@@ -33,12 +40,12 @@
 	};
 </script>
 
-<div class="w-[1920px]">
+<div class="w-full h-max md:w-[1920px]">
 	<Splide {options} bind:this={slider}>
 		{#each nft_artworks as item, index (index + item)}
 			<SplideSlide>
-				<div class="w-[289px] h-[289px] p-1 rounded-xl bg-white">
-					<img class="w-full h-full object-none" alt={item} src={item} />
+				<div class="w-[150px] h-[150px] md:w-[289px] md:h-[289px] p-1 rounded-xl bg-white">
+					<img class="w-full h-full object-cover md:object-none" alt={item} src={item} />
 				</div>
 			</SplideSlide>
 		{/each}
@@ -46,17 +53,17 @@
 </div>
 <div class="flex items-center justify-center gap-5">
 	<button
-		class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer"
+		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer"
 		on:click={onArtworkCarouselClickAdvance}
 	>
-		<img alt="arrow-left" src={arrow_left} />
+		<img class="w-2/4 object-none md:w-full" alt="arrow-left" src={arrow_left} />
 	</button>
 
 	<button
-		class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer"
+		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer"
 		on:click={onArtworkCarouselClickBack}
 	>
-		<img alt="arrow-right" src={arrow_right} />
+		<img class="w-2/4 object-none md:w-full" alt="arrow-right" src={arrow_right} />
 	</button>
 </div>
 
