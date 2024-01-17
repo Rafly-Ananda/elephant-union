@@ -7,7 +7,7 @@
 >
 	<img class="w-[40%] sm:w-min md:object-none" alt="The project logo" src={logo} />
 	<div
-		class="md:w-[198px] md:h-[48px] bg-white rounded-[10px] flex items-center justify-center md:justify-evenly gap-2"
+		class="md:w-[198px] md:h-[48px] bg-white rounded-[10px] flex items-center justify-center md:justify-evenly gap-2 p-2 md:p-0"
 	>
 		<div class=" cursor-pointer">
 			<p class="text-sm md:text-[16px] font-normal leading-6 font-grotesk">Sign Up</p>

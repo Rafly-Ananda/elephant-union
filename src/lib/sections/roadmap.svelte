@@ -110,7 +110,7 @@
 </script>
 
 <div
-	class="w-full h-full flex flex-col xl:flex-row justify-center bg-[#232A32] items-start lg:px-[64px] lg:py-20"
+	class="w-full h-full flex flex-col lg:flex-row justify-center bg-[#232A32] items-start p-6 lg:px-[64px] lg:py-20"
 >
 	<!-- Left Side -->
 	<div class="w-full h-full flex flex-col items-center justify-center gap-4 md:items-start">
@@ -158,7 +158,7 @@
 	</div>
 
 	<!-- Right Side -->
-	<div class="w-full h-full flex flex-col items-center justify-center lg:h-2/4 lg:w-2/4">
+	<div class="w-full h-full flex flex-col items-center justify-center my-10 lg:h-2/4 lg:w-2/4">
 		<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Roadmap:</h4>
 		<div class="w-full h-full mt-5">
 			<div class="w-full h-full flex flex-col items-center justify-start relative">

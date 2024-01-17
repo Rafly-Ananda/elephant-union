@@ -16,8 +16,10 @@
 		arrows: false,
 		pagination: false,
 		breakpoints: {
-			768: {
-				gap: '1rem'
+			640: {
+				gap: '1rem',
+				autoWidth: false,
+				perPage: 1
 			}
 		}
 	};
@@ -62,20 +64,20 @@
 		</div>
 	</div>
 	<!-- Right Side -->
-	<div class="lg:w-full lg:h-full 2xl:ml-20">
+	<div class="w-full h-full lg:w-full lg:h-full">
 		<Splide {options} bind:this={slider}>
 			{#each [1, 2] as item, index (index + item)}
 				<SplideSlide>
 					<div
-						class="w-[550px] h-[261px] lg:w-[820px] lg:h-[361px] flex items-center bg-white rounded-2xl"
+						class="md:w-[550px] md:h-[261px] lg:w-[820px] lg:h-[361px] flex flex-col md:flex-row items-center bg-white rounded-2xl"
 					>
-						<div class="w-full h-full">
-							<img class="w-full h-full" src={delete_me_later} alt="delete-me-later" />
+						<div class="hidden md:block w-full h-full">
+							<img class="w-full h-full object-fill" src={delete_me_later} alt="delete-me-later" />
 						</div>
 						<div
 							class="w-full h-full p-4 flex flex-col items-start justify-between gap-4 font-grotesk"
 						>
-							<h5 class="text-lg lg:text-4xl font-medium">Elephants gonna be wild dude!</h5>
+							<h5 class="text-lg lg:text-3xl font-medium">Elephants gonna be wild dude!</h5>
 
 							<p class="text-xs lg:text-lg text-[#98A0A2]">
 								Coffee is the most popular drink in the world and drinking coffee in the morning has
