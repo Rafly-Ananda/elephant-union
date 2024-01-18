@@ -26,7 +26,7 @@
 			<div
 				class="max-w-[917px] bg-white h-fit rounded-xl font-grotesk p-10 flex flex-col items-start justify-center gap-5"
 			>
-				<div class="flex items-center justify-between w-full z-50">
+				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-3xl">{title}</h2>
 					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
 				</div>
@@ -39,7 +39,7 @@
 			<div
 				class="max-w-[917px] bg-white h-fit rounded-xl font-grotesk p-10 flex flex-col items-start justify-center gap-5"
 			>
-				<div class="flex items-center justify-between w-full z-50">
+				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-3xl">$ {title}</h2>
 					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
 				</div>
@@ -61,7 +61,7 @@
 			<div
 				class="max-w-[600px] bg-white h-fit rounded-xl font-grotesk p-10 flex flex-col items-start justify-center gap-5"
 			>
-				<div class="flex items-center justify-between w-full z-50">
+				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-5xl">{title}</h2>
 					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
 				</div>
@@ -89,6 +89,6 @@
 
 		/* allow click-through to backdrop */
 		pointer-events: none;
-		/* z-index: 40; */
+		z-index: 40;
 	}
 </style>

@@ -172,7 +172,7 @@
 				</div>
 
 				<!-- #Start Milestone 1 -->
-				<div class="w-full relative">
+				<div class="w-full relative z-0">
 					<div class="absolute w-2/4 h-full left-0">
 						<div
 							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
@@ -205,7 +205,7 @@
 				<!-- /End Milestone 1 -->
 
 				<!-- #Start Milestone 2 -->
-				<div class="w-full relative mt-32">
+				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full right-0">
 						<div
 							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
@@ -238,7 +238,7 @@
 				<!-- /End Milestone 2 -->
 
 				<!-- #Start Milestone 3 -->
-				<div class="w-full relative mt-32">
+				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full left-0">
 						<div
 							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
@@ -271,7 +271,7 @@
 				<!-- /End Milestone 3 -->
 
 				<!-- #Start Milestone 4 -->
-				<div class="w-full relative mt-32">
+				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full right-0">
 						<div
 							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"

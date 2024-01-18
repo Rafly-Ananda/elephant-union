@@ -10,7 +10,6 @@
 	import showcase_2 from '$lib/assets/gadjah-showcase-2.png';
 	import showcase_3 from '$lib/assets/gadjah-showcase-3.png';
 	import showcase_4 from '$lib/assets/gadjah-showcase-4.png';
-	import showcase_5 from '$lib/assets/gadjah-showcase-5.png';
 
 	let nft_artworks = [showcase_1, showcase_2, showcase_3, showcase_4];
 

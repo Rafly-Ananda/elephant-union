@@ -3,7 +3,7 @@
 </script>
 
 <nav
-	class="bg-[#fbf8f4] bg-opacity-40 w-full h-[10%] md:h-[120px] flex items-center justify-between p-6 md:p-[64px] fixed z-20"
+	class="bg-[#fbf8f4] bg-opacity-40 w-full h-[10%] md:h-[120px] flex items-center justify-between p-6 md:p-[64px] fixed z-10"
 >
 	<img class="w-[30%] sm:w-min md:object-none" alt="The project logo" src={logo} />
 	<div

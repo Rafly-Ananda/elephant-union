@@ -16,7 +16,6 @@
 	import pertamina_ep from '$lib/assets/pertamina-ep.png';
 	import solar_generation from '$lib/assets/solar-generation.png';
 	import ggf from '$lib/assets/ggf.png';
-	import kopi_tubruk_gajah from '$lib/assets/kopi-tubruk-gajah.png';
 	import indofood from '$lib/assets/indofood.png';
 
 	const our_friends = [
