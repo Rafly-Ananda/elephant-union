@@ -41,7 +41,7 @@
 	<div
 		class="flex flex-col flex-none items-center justify-center 2xl:items-start 2xl:justify-start w-full lg:w-[450px] h-fit gap-4"
 	>
-		<h1 class="font-grotesk text-4xl font-medium text-center lg:text-left">
+		<h1 class="font-grotesk text-3xl md:text-4xl font-medium text-center lg:text-left">
 			Want to read something <span class="text-[#00DF8E]">very interesting</span> about elephant?
 		</h1>
 
@@ -64,7 +64,7 @@
 		</div>
 	</div>
 	<!-- Right Side -->
-	<div class="w-full h-full lg:w-full lg:h-full">
+	<div class="w-full h-full lg:w-full lg:h-full mt-4">
 		<Splide {options} bind:this={slider}>
 			{#each [1, 2] as item, index (index + item)}
 				<SplideSlide>

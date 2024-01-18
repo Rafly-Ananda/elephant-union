@@ -13,6 +13,7 @@ import WhyAreWeHere from './sections/whyAreWeHere.svelte';
 import DigitalContents from './sections/digitalContents.svelte';
 import ElephantsTrivia from './sections/elephantsTrivia.svelte';
 import UnionUpdates from './sections/unionUpdates.svelte';
+import OurTeams from './sections/ourTeams.svelte';
 import WeAreSeenOn from './sections/weAreSeenOn.svelte';
 import OurFriends from './sections/ourFriends.svelte';
 import PreFooter from './sections/preFooter.svelte';
@@ -27,6 +28,7 @@ export {
 	ElephantsTrivia,
 	UnionUpdates,
 	WeAreSeenOn,
+	OurTeams,
 	OurFriends,
 	PreFooter,
 	Footer,

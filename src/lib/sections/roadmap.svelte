@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { openModal } from 'svelte-modals';
+	import { Modal } from '$lib';
+
 	import union_collectibles from '$lib/assets/union-collectibles-logo.png';
 	import typography_union_collectibles from '$lib/assets/elephant-union-collectible-series.png';
 	import copy_collectibles from '$lib/assets/collectibles_copy.png';
@@ -19,9 +22,6 @@
 	import milestone_dimmed_point from '$lib/assets/milestone-dimmed-point.svg';
 	import line from '$lib/assets/line.svg';
 	import arrow_up_icon from '$lib/assets/arrow-up-icon.svg';
-
-	import { openModal } from 'svelte-modals';
-	import { Modal } from '$lib';
 
 	interface benefitModalContentType {
 		title: string;

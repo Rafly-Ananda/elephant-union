@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '@splidejs/svelte-splide/css';
-	import { onMount } from 'svelte';
 
 	import hero from '$lib/assets/hero-bg.png';
 
@@ -12,15 +11,15 @@
 		DigitalContents,
 		ElephantsTrivia,
 		UnionUpdates,
+		OurTeams,
 		WeAreSeenOn,
 		OurFriends,
 		PreFooter,
 		Footer,
-		Navbar,
-		Modal
+		Navbar
 	} from '$lib';
 
-	import { Modals, closeModal, openModal, modals } from 'svelte-modals';
+	import { Modals, closeModal } from 'svelte-modals';
 
 	import { fade } from 'svelte/transition';
 </script>
@@ -59,7 +58,11 @@
 		<!-- Elephant Union Updates -->
 		<UnionUpdates />
 
+		<!-- Our Teams -->
+		<OurTeams />
+
 		<!-- We're seen on -->
+
 		<WeAreSeenOn />
 
 		<!-- Our Friends -->
@@ -73,7 +76,7 @@
 	</div>
 </main>
 <Modals>
-	<div slot="backdrop" class="backdrop" transition:fade on:click={closeModal} />
+	<button slot="backdrop" class="backdrop" transition:fade on:click={closeModal}> </button>
 </Modals>
 
 <style lang="postcss">

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { EcosystemCardsCarousel } from '$lib';
+	import { EcosystemCardsCarousel, Modal } from '$lib';
+	import { openModal } from 'svelte-modals';
 
 	// Assets Connecting Cards
 	import community_meetup from '$lib/assets/community-meetup.png';
@@ -25,6 +26,8 @@
 	import firewatch from '$lib/assets/firewatch.png';
 	import chocolearn from '$lib/assets/chocolearn.png';
 	import take_over_area from '$lib/assets/take-over-area.png';
+
+	import CEBB_token_logo from '$lib/assets/CEBB-token-logo.png';
 
 	let ecosystem_nav = ['Connecting', 'Earning', 'Building', 'Branding'];
 
@@ -142,6 +145,13 @@
 		selectedEcosystemNav = target;
 	};
 
+	function handleOpen(content: string) {
+		openModal(Modal, {
+			title: content,
+			message: content
+		});
+	}
+
 	onMount(() => {});
 </script>
 
@@ -149,10 +159,17 @@
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-bold font-grotesk">Ecosystem</h1>
 
 	<p
-		class="font-grotesk text-center font-light text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px]"
+		class="flex items-start md:items-center justify-center font-grotesk font-light text-xs md:text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px] gap-2 text-justify md:text-center"
 	>
-		<span class="font-medium">!CEBB</span> stands as the core principles in our strategic guide for building
-		this community
+		<button
+			class="flex items-center justify-center font-medium underline gap-1 mr-2 md:mr-0"
+			on:click={() => handleOpen('CEBB')}
+		>
+			<img class="flex-none" src={CEBB_token_logo} alt="CEBB Token Logo" />
+			!CEBB
+		</button>
+
+		stands as the core principles in our strategic guide for building this community
 	</p>
 
 	<!-- Ecosystem Navigation -->
@@ -163,7 +180,7 @@
 				<button
 					class={` ${
 						item === selectedEcosystemNav ? 'bg-[#00df8e] text-black' : 'text-[#84807b]'
-					} flex items-center justify-center p-1 md:p-2 lg:p-3 font-bold font-grotesk text-sm md:text-xl lg:text-3xl rounded-md`}
+					} flex items-center justify-center p-2 md:p-2 lg:p-3 font-bold font-grotesk text-sm md:text-xl lg:text-3xl rounded-md`}
 					on:click={(e) => {
 						onEcosystemNavClick(e, item);
 					}}
