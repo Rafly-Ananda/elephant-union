@@ -101,12 +101,12 @@
 		}
 	];
 
-	function handleOpen(content: benefitModalContentType | roadmap_modal_content) {
+	const handleOpen = (content: benefitModalContentType | roadmapModalContentType) => {
 		openModal(Modal, {
 			title: content.title,
 			message: content.content
 		});
-	}
+	};
 </script>
 
 <div
@@ -114,53 +114,68 @@
 >
 	<!-- Left Side -->
 	<div class="w-full h-full flex flex-col items-center justify-center gap-4 md:items-start">
-		<div class=" flex justify-start">
-			<img class="w-fit object-none" alt="Union Collectibles" src={union_collectibles} />
+		<div class=" flex justify-start items-end gap-2">
 			<img
-				class="w-fit object-none"
-				alt="Union Collectibles Typography"
-				src={typography_union_collectibles}
+				class="w-[25%] md:w-fit md:object-none"
+				alt="Union Collectibles"
+				src={union_collectibles}
 			/>
+			<div class="font-graphik text-white font-bold text-lg">
+				<h1>Elephant Union</h1>
+				<h1>Collectible Series</h1>
+			</div>
 		</div>
 
-		<h1 class=" text-white font-bold text-4xl lg:text-6xl text-center lg:text-left lg:w-4/5">
-			Discover, Collect NFT and <span class="text-[#00DF8E]">become a member</span>
+		<h1
+			class=" text-white font-extrabold text-3xl md:text-4xl lg:text-6xl text-center lg:text-left lg:w-4/5 font-graphik"
+		>
+			Discover, collect NFT, and <span class="text-[#00DF8E]">become a member</span>
 		</h1>
 
-		<div class="flex flex-col items-center md:items-start gap-4">
-			<h4 class="text-lg md:text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Benefits:</h4>
+		<div class="flex flex-col items-center md:items-start gap-4 mt-6">
+			<h4 class="text-2xl md:text-3xl leading-7 font-graphik text-[#00DF8E] font-extrabold">
+				Benefits:
+			</h4>
 			<div class="flex gap-2 hover:cursor-pointer">
 				{#each benefit_modal_content as item, index (index + item.title)}
 					<button
 						class="w-full h-full rounded-md bg-white flex items-center justify-center"
 						on:click={() => handleOpen(item)}
 					>
-						<img alt={item.title} src={item.art} />
+						<img class="w-[83px] h-[83px]" alt={item.title} src={item.art} />
 					</button>
 				{/each}
 			</div>
 
 			<div class="w-full lg:w-2/4">
-				<p class=" text-sm lg:text-base text-justify font-light font-grotesk text-white">
+				<p
+					class=" text-sm lg:text-base text-center md:text-left font-light font-grotesk text-white"
+				>
 					In this Elephant Union collection, our focus is to transform these NFTs into utility
 					members for participants in our mission. From privileges to economic benefits.
 				</p>
 			</div>
 
-			<div class="flex items-center justify-around rounded-lg w-fit bg-white p-2">
-				<div class="flex items-center justify-center gap-2">
-					<p class="font-grotesk text-xs">Listing on:</p>
-					<img alt="Algorand" class="w-2/5" src={algorand_logo} />
+			<div
+				class="flex items-center justify-around rounded-lg gap-2 w-fit bg-white p-2 mt-5 md:mt-0"
+			>
+				<div class="flex items-center justify-center px-2">
+					<p class="font-grotesk w-full">Listing on:</p>
+					<img alt="Algorand" class="w-full" src={algorand_logo} />
 				</div>
-				<button class=" px-6 py-1 bg-[#00DF8E] rounded-lg text-sm font-medium"> Mint Now </button>
+				<button class="px-10 py-3 bg-[#00DF8E] rounded-lg font-bold font-grotesk md:text-lg">
+					Mint Now
+				</button>
 			</div>
 		</div>
 	</div>
 
 	<!-- Right Side -->
 	<div class="w-full h-full flex flex-col items-center justify-center my-10 lg:h-2/4 lg:w-2/4">
-		<h4 class="text-xl leading-7 font-grotesk text-[#00DF8E] font-bold">Roadmap:</h4>
-		<div class="w-full h-full mt-5">
+		<h4 class="text-2xl md:text-3xl leading-7 font-graphik text-[#00DF8E] font-extrabold">
+			Roadmap
+		</h4>
+		<div class="w-full h-full mt-10">
 			<div class="w-full h-full flex flex-col items-center justify-start relative">
 				<div class="w-full h-[95%] bottom-0 absolute">
 					<!-- Centered Child Div -->
@@ -175,15 +190,22 @@
 				<div class="w-full relative z-0">
 					<div class="absolute w-2/4 h-full left-0">
 						<div
-							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
-						></div>
-						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
 						></div>
 
-						<div class="w-2/4 h-full flex items-center justify-center absolute left-0 pr-2">
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[65%] md:left-1/2 transform -translate-x-1/4 -translate-y-1/2"
+						></div>
+
+						<div
+							class="w-[70%] md:w-2/4 h-full flex flex-col items-center justify-center absolute left-0 pr-2"
+						>
 							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
-								Sustaining Economic Impact (2024-2025)
+								First Step to Humanity
+							</h3>
+
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								(2022-2023)
 							</h3>
 						</div>
 					</div>
@@ -196,7 +218,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-1/2 lg:left-48 transform -translate-y-1/2 right-0"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[40%] md:left-[25%] lg:left-48 transform -translate-y-1/2 right-0"
 						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
 						Chapter 1
@@ -208,29 +230,35 @@
 				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full right-0">
 						<div
-							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
 						></div>
 						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[35%] md:left-1/2 md:right-2/4 transform -translate-x-1/2 -translate-y-1/2"
 						></div>
 
-						<div class="w-2/4 h-full flex items-center justify-center absolute right-0 pl-2">
+						<div
+							class="w-[70%] md:w-2/4 h-full flex flex-col items-center justify-center absolute right-0 pl-2"
+						>
 							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
-								Sustaining Economic Impact (2024-2025)
+								Sustaining Economic Impact
+							</h3>
+
+							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+								(2024-2025)
 							</h3>
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+					<button on:click={() => handleOpen(roadmap_modal_content[1])}>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
-							src={milestone_point}
+							src={milestone_glowing_point}
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-1/2 lg:right-44"
-						on:click={() => handleOpen(roadmap_modal_content[0])}
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-[40%] md:right-1/2 lg:right-48"
+						on:click={() => handleOpen(roadmap_modal_content[1])}
 					>
 						Chapter 2
 					</button>
@@ -241,29 +269,32 @@
 				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full left-0">
 						<div
-							class="w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
-						></div>
-						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
 						></div>
 
-						<div class="w-2/4 h-full flex items-center justify-center absolute left-0 pr-2">
+						<div
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[65%] md:left-1/2 transform -translate-x-1/4 -translate-y-1/2"
+						></div>
+
+						<div
+							class="w-[70%] md:w-2/4 h-full flex items-center justify-center absolute left-0 pr-2"
+						>
 							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
 								Direct Actions for Elephants
 							</h3>
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+					<button on:click={() => handleOpen(roadmap_modal_content[2])}>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
-							src={milestone_glowing_point}
+							src={milestone_point}
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-1/2 transform -translate-y-1/2 right-0 lg:left-44"
-						on:click={() => handleOpen(roadmap_modal_content[0])}
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[40%] md:left-[25%] lg:left-48 transform -translate-y-1/2 right-0"
+						on:click={() => handleOpen(roadmap_modal_content[2])}
 					>
 						Chapter 3
 					</button>
@@ -274,20 +305,22 @@
 				<div class="w-full relative mt-32 z-0">
 					<div class="absolute w-2/4 h-full right-0">
 						<div
-							class="w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
 						></div>
 						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[35%] md:left-1/2 md:right-2/4 transform -translate-x-1/2 -translate-y-1/2"
 						></div>
 
-						<div class="w-2/4 h-full flex items-center justify-center absolute right-0 pl-2">
+						<div
+							class="w-[70%] md:w-2/4 h-full flex items-center justify-center absolute right-0 pl-2"
+						>
 							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
 								Exploring New Horizons
 							</h3>
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+					<button on:click={() => handleOpen(roadmap_modal_content[3])}>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
@@ -295,8 +328,8 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-1/2 lg:right-44"
-						on:click={() => handleOpen(roadmap_modal_content[0])}
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-[40%] md:right-1/2 lg:right-48"
+						on:click={() => handleOpen(roadmap_modal_content[3])}
 					>
 						Chapter 4
 					</button>
@@ -304,7 +337,7 @@
 				<!-- /End Milestone 4 -->
 			</div>
 		</div>
-		<div class="flex items-center justify-center mt-10">
+		<div class="flex items-center justify-center mt-10 font-grotesk">
 			<h4 class="text-[16px] font-light leading-7 text-white text-center">
 				We have Encyclopedia (Whitepaper) too, on <span class="font-bold text-[#00DF8E] underline"
 					>GitBook <img class="inline-block" alt="arrow-up-icon" src={arrow_up_icon} />

@@ -50,7 +50,7 @@
 <div
 	class="w-full px-6 2xl:px-[290px] h-full flex flex-col items-center justify-center mt-10 md:mt-[100px] lg:mt-[177px]"
 >
-	<h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">Our Teams</h1>
+	<h1 class="text-2xl md:text-4xl lg:text-6xl font-graphik font-extrabold">Our Teams</h1>
 	<div class="w-full h-full flex flex-wrap items-center justify-center gap-6 mt-7 lg:mt-[75px]">
 		{#each our_teams as item, index (item.name + index)}
 			<div class="font-grotesk bg-white w-[150px] h-[270px] md:w-[240px] md:h-[395px] rounded-xl">

@@ -156,7 +156,7 @@
 </script>
 
 <main class="w-full p-6 flex flex-col items-center justify-center mt-[20px] lg:mt-[120px]">
-	<h1 class="text-2xl md:text-4xl lg:text-6xl font-bold font-grotesk">Ecosystem</h1>
+	<h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold font-graphik">Ecosystem</h1>
 
 	<p
 		class="flex items-start md:items-center justify-center font-grotesk font-light text-xs md:text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px] gap-2 text-justify md:text-center"
@@ -166,7 +166,7 @@
 			on:click={() => handleOpen('CEBB')}
 		>
 			<img class="flex-none" src={CEBB_token_logo} alt="CEBB Token Logo" />
-			!CEBB
+			CEBB
 		</button>
 
 		stands as the core principles in our strategic guide for building this community

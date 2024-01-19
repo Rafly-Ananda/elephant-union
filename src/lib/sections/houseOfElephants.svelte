@@ -8,8 +8,6 @@
 	import hoe_tangkahan from '$lib/assets/hoe-tangkahan.png';
 	import hoe_tesso_nilo from '$lib/assets/hoe-tesso-nilo.png';
 
-	import showcase_4 from '$lib/assets/gadjah-showcase-4.png';
-
 	let hoe_items = [hoe_way_kambas, hoe_bandung, hoe_bali, hoe_tangkahan, hoe_tesso_nilo];
 </script>
 

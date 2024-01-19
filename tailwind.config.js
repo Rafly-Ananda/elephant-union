@@ -6,9 +6,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				grotesk: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans]
+				grotesk: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
+				graphik: ['Graphik', ...defaultTheme.fontFamily.sans]
 			}
 		}
-	},
-	plugins: []
+	}
 };

@@ -10,6 +10,8 @@
 
 	let footer_info_nav = ['About Us', 'Articles', 'Careers', 'FAQs', 'NFT Collections'];
 
+	let email = '';
+
 	const social_media_logos = [facebook, instagram, x, linkedin, youtube];
 </script>
 
@@ -53,12 +55,21 @@
 		<div class="w-full flex flex-col items-center justify-center lg:block lg:w-[322px]">
 			<h6 class="text-lg font-bold">Stay In The Loop</h6>
 
-			<p class="font-light text-sm mt-5">
+			<p class="font-light text-sm mt-5 text-center md:text-left">
 				We also have a collection of interesting articles that you can read anytime. Subscribe now
 				to not miss any of our article releases.
 			</p>
 
-			<div></div>
+			<div
+				class="w-full h-full flex justify-between bg-white rounded-xl mt-5 text-black p-2 font-grotesk"
+			>
+				<input bind:value={email} class="text-xs" placeholder="Enter your email address.." />
+				<div
+					class="cursor-pointer bg-[#00DF8E] flex items-center justify-center py-1 px-4 rounded-md"
+				>
+					<p class="text-sm font-medium md:leading-6 font-grotesk">Subscribe Now</p>
+				</div>
+			</div>
 		</div>
 	</div>
 

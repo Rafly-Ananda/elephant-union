@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '@splidejs/svelte-splide/css';
 
-	import hero from '$lib/assets/hero-bg.png';
+	import hero from '$lib/assets/hero.png';
 
 	import {
 		Ecosystem,
@@ -30,7 +30,11 @@
 
 	<!-- Hero Image -->
 	<div class="w-full h-screen">
-		<img class="w-full h-full object-cover rounded-b-2xl" alt="Hero logo" src={hero} />
+		<img
+			class="w-full h-full object-cover md:object-fill rounded-b-2xl"
+			alt="Hero logo"
+			src={hero}
+		/>
 	</div>
 
 	<!-- Union Collectibles -->
