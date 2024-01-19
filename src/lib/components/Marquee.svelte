@@ -2,7 +2,7 @@
 
 <div class="marquee min-h-[60px] md:min-h-[90px]">
 	<div class="track">
-		<div class="font-grotesk font-bold text-xl md:text-4xl">
+		<div class="font-graphik font-bold text-xl md:text-4xl">
 			&nbsp; ELEPHANT UNION SERIES * NFT COLLECTION * ELEPHANT UNION SERIES * NFT COLLECTION *
 			ELEPHANT UNION SERIES * NFT COLLECTION * ELEPHANT UNION SERIES * NFT COLLECTION * ELEPHANT
 			UNION SERIES * NFT COLLECTION * ELEPHANT UNION SERIES * NFT COLLECTION * ELEPHANT UNION SERIES

@@ -114,7 +114,7 @@
 >
 	<!-- Left Side -->
 	<div class="w-full h-full flex flex-col items-center justify-center gap-4 md:items-start">
-		<div class=" flex justify-start items-end gap-2">
+		<div class=" flex justify-start items-end md:items-center gap-2">
 			<img
 				class="w-[25%] md:w-fit md:object-none"
 				alt="Union Collectibles"
