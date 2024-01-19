@@ -159,7 +159,7 @@
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold font-graphik">Ecosystem</h1>
 
 	<p
-		class="flex items-start md:items-center justify-center font-grotesk font-light text-xs md:text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px] gap-2 text-justify md:text-center"
+		class="flex items-center flex-col md:flex-row center justify-center font-grotesk font-light text-xs md:text-base md:leading-4 lg:text-xl lg:leading-8 mt-[50px] gap-2 text-center"
 	>
 		<button
 			class="flex items-center justify-center font-medium underline gap-1 mr-2 md:mr-0"

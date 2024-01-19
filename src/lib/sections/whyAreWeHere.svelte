@@ -41,26 +41,21 @@
 	onMount(() => {
 		dynamicDesc = elephantUnionText[0];
 
-		// console.log(slider.splide.Components.Elements.slides);
-
-		// console.log(cloned);
-
 		slider.splide.on('move', () => {
-			console.log(slider.splide.Components.Slides.get());
-			// dynamicDesc = elephantUnionText[slider.splide.index];
+			dynamicDesc = elephantUnionText[slider.splide.index];
 		});
 
-		slider.splide.on('active', (e: any) => {
-			slider.splide.Components.Slides.get().forEach((e) => {
-				if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
-					e.slide.classList.remove('unfocused_slide');
-					e.slide.classList.add('focused_slide');
-				} else {
-					e.slide.classList.remove('focused_slide');
-					e.slide.classList.add('unfocused_slide');
-				}
-			});
-		});
+		// slider.splide.on('active', (e: any) => {
+		// 	slider.splide.Components.Slides.get().forEach((e) => {
+		// 		if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
+		// 			e.slide.classList.remove('unfocused_slide');
+		// 			e.slide.classList.add('focused_slide');
+		// 		} else {
+		// 			e.slide.classList.remove('focused_slide');
+		// 			e.slide.classList.add('unfocused_slide');
+		// 		}
+		// 	});
+		// });
 	});
 </script>
 
@@ -78,9 +73,9 @@
 </div>
 
 <p
-	class="font-grotesk text-center text-base md:text-lg lg:text-xl font-medium leading-6 lg:leading-8 mt-[40px] md:mt-[80px] p-6"
+	class="w-full md:w-[50%] font-grotesk text-center text-base md:text-lg lg:text-2xl font-medium leading-6 lg:leading-8 md:mt-[80px] p-6"
 >
-	<q>{dynamicDesc}!</q>
+	<q>{dynamicDesc}</q>
 </p>
 
 <style>
