@@ -5,12 +5,12 @@
 <nav
 	class="bg-transparent w-full h-[10%] md:h-[120px] flex items-start md:items-center justify-between p-6 md:p-[64px] absolute"
 >
-	<img class="w-[30%] sm:w-min md:object-none" alt="The project logo" src={logo} />
+	<img class="w-[35%] sm:w-min md:object-none" alt="The project logo" src={logo} />
 
-	<div class=" flex flex-col md:flex-row gap-2 md:gap-5">
-		<div class="font-grotesk flex flex-col items-center justify-center hover:cursor-pointer">
-			<h6 class="font-bold md:text-[16px]">UNION</h6>
-			<p class=" text-[8px] md:text-xs bg-[#A53A4C] text-white p-1 rounded-xl">Coming Soon</p>
+	<div class=" flex gap-2 md:gap-5">
+		<div class="font-grotesk flex flex-col items-end justify-center hover:cursor-pointer">
+			<p class=" text-[5px] md:text-[8px] bg-[#A53A4C] text-white px-1 rounded-xl">Coming Soon</p>
+			<h6 class="font-bold md:text-3xl">UNION</h6>
 		</div>
 		<div
 			class=" w-fit md:h-[48px] bg-white rounded-md md:rounded-[10px] flex items-center justify-center md:justify-evenly gap-4 p-2 md:p-2"
