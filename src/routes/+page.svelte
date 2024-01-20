@@ -2,6 +2,7 @@
 	import '@splidejs/svelte-splide/css';
 
 	import hero from '$lib/assets/hero.png';
+	import scroll_down_arrow from '$lib/assets/scroll-down-arrow.png';
 
 	import {
 		Ecosystem,
@@ -22,6 +23,14 @@
 	import { Modals, closeModal } from 'svelte-modals';
 
 	import { fade } from 'svelte/transition';
+
+	function scrollIntoView(sectionId: string) {
+		const el = document.querySelector(`#${sectionId}`);
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <main class="w-full h-full relative bg-[#232A32] overflow-hidden">
@@ -29,13 +38,20 @@
 	<Navbar />
 
 	<!-- Hero Image -->
-	<div class="w-full h-screen">
+	<div class="w-full h-screen relative">
 		<img
 			class="w-full h-full object-cover md:object-fill rounded-b-2xl"
 			alt="Hero logo"
 			src={hero}
 		/>
+		<div class="w-screen flex items-center justify-center">
+			<button on:click|preventDefault={() => scrollIntoView('roadmap')}>
+				<img src={scroll_down_arrow} class=" animate-bounce" alt="scroll down button" />
+			</button>
+		</div>
 	</div>
+
+	<div id="roadmap" class=""></div>
 
 	<!-- Union Collectibles -->
 	<Roadmap />

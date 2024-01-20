@@ -3,7 +3,7 @@
 </script>
 
 <nav
-	class="bg-gradient-to-b from-[#232A32] to-bg-transparent w-full h-[10%] md:h-[120px] flex items-start md:items-center justify-between p-6 md:p-[64px] absolute"
+	class="bg-gradient-to-b from-[#232A32] to-bg-transparent w-full h-screen flex items-start md:items-start justify-between p-6 md:px-[64px] absolute z-10"
 >
 	<div class="w-full flex items-start justify-between md:items-center md:justify-center">
 		<div class="w-[50%] h-[50%]">

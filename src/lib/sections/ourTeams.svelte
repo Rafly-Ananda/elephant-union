@@ -20,18 +20,114 @@
 		assets: string;
 	}
 
-	let our_teams: ourTeamType[] = [
+	let our_teams_compact_desktop: ourTeamType[] = [
 		{
-			name: 'BOY',
+			name: 'Boy',
 			title: 'Community',
 			achievements: ['president director oxlabs', 'director coinfolks'],
 			assets: team_1
 		},
 		{
-			name: 'Zachary',
+			name: 'Adrian',
 			title: 'Advisory',
 			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
 			assets: team_2
+		},
+		{
+			name: 'Zach',
+			title: 'Artist',
+			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
+			assets: team_2
+		},
+		{
+			name: 'Rafly',
+			title: 'Technolgy',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		},
+		{
+			name: 'Arnold',
+			title: 'Technolgy',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		}
+	];
+
+	let our_teams_compact_mobile: ourTeamType[] = [
+		{
+			name: 'Boy',
+			title: 'Community',
+			achievements: ['president director oxlabs', 'director coinfolks'],
+			assets: team_1
+		},
+		{
+			name: 'Adrian',
+			title: 'Advisory',
+			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
+			assets: team_2
+		},
+		{
+			name: 'Zach',
+			title: 'Artist',
+			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
+			assets: team_2
+		},
+		{
+			name: 'Rafly',
+			title: 'Technolgy',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		}
+	];
+
+	let our_teams_full: ourTeamType[] = [
+		{
+			name: 'Boy',
+			title: 'Community',
+			achievements: ['president director oxlabs', 'director coinfolks'],
+			assets: team_1
+		},
+		{
+			name: 'Adrian',
+			title: 'Advisory',
+			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
+			assets: team_2
+		},
+		{
+			name: 'Zach',
+			title: 'Artist',
+			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
+			assets: team_2
+		},
+		{
+			name: 'Rafly',
+			title: 'Technolgy',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		},
+		{
+			name: 'Arnold',
+			title: 'Technolgy',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		},
+		{
+			name: 'Xav',
+			title: 'Blockchain',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		},
+		{
+			name: 'Heimdalm',
+			title: 'Creative',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
+		},
+		{
+			name: 'Silvi',
+			title: 'Media',
+			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
+			assets: team_3
 		},
 		{
 			name: 'Tsalis',
@@ -44,22 +140,25 @@
 			title: 'Hospitality',
 			achievements: ['profesional guide way kambas national park', 'ex-cruise hospitality'],
 			assets: team_5
-		},
-		{
-			name: 'Rafly',
-			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
 		}
 	];
+
+	let showMoreTeam: boolean = false;
+
+	const onShowMoreTeamToggle = () => {
+		showMoreTeam = showMoreTeam ? false : true;
+	};
 </script>
 
 <div
 	class="w-full px-6 2xl:px-[290px] h-full flex flex-col items-center justify-center mt-10 md:mt-[100px] lg:mt-[177px]"
 >
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-graphik font-extrabold">Our Teams</h1>
-	<div class="w-full h-full flex flex-wrap items-center justify-center gap-4 mt-7 lg:mt-[75px]">
-		{#each our_teams as item, index (item.name + index)}
+	<!-- For Desktop View -->
+	<div
+		class="w-full h-full md:flex flex-wrap items-center justify-center gap-4 mt-7 lg:mt-[75px] hidden"
+	>
+		{#each showMoreTeam ? our_teams_full : our_teams_compact_desktop as item, index (item.name + index)}
 			<div
 				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
 			>
@@ -85,6 +184,40 @@
 			</div>
 		{/each}
 	</div>
+	<!-- For Mobile View -->
+	<div
+		class="w-full h-full items-center justify-center gap-4 mt-7 lg:mt-[75px] flex flex-wrap md:hidden"
+	>
+		{#each showMoreTeam ? our_teams_full : our_teams_compact_mobile as item, index (item.name + index)}
+			<div
+				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
+			>
+				<img src={item.assets} alt={item.name} class="rounded-t-xl" />
+				<div class=" py-2 px-4 md:p-5 w-full h-fit text-white">
+					<h5 class="font-bold text-xs md:text-base">{item.name}</h5>
+					<h6 class="text-[11px] md:text-sm">{item.title}</h6>
+					<ul class="flex items-center justify-start md:mt-4 mt-2 opacity-75">
+						{#each social_media_logos as item, index (item + index)}
+							<a href=""><img class="w-[70%] md:w-[80%]" src={item} alt={item} /></a>
+						{/each}
+					</ul>
+
+					<!-- <ul class="text-[10px] md:text-xs mt-2 md:mt-1 uppercase text-[#5F6980]">
+					{#each item.achievements as achv (item.name + achv)}
+						<li class="flex items-center">
+							<div class="w-[5px] h-[5px] rounded-full bg-[#5F6980] mr-2 flex-none"></div>
+							{achv}
+						</li>
+					{/each}
+				</ul> -->
+				</div>
+			</div>
+		{/each}
+	</div>
+
+	<button class="font-grotesk opacity-60 cursor-pointer mt-10" on:click={onShowMoreTeamToggle}>
+		{showMoreTeam ? `Show Less` : `Show More..`}
+	</button>
 </div>
 
 <style></style>

@@ -87,7 +87,10 @@
 		<div
 			class="w-full flex items-center justify-center md:justify-start gap-4 text-xs lg:gap-10 lg:text-base"
 		>
-			<span>&#169; 2024 Elephant Union. All rights reserved.</span>
+			<div class="flex flex-col w-full">
+				<span>&#169; 2024 Elephant Union.</span>
+				<span>All rights reserved.</span>
+			</div>
 
 			<a href="#" class="underline">Privacy Policy</a>
 			<a href="#" class="underline">Terms and Conditions</a>

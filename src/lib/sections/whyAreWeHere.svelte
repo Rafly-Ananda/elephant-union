@@ -30,6 +30,7 @@
 	};
 
 	let dynamicDesc: string;
+	let activeSlide: any;
 
 	const elephantUnionText = [
 		'Elephant Union is here to drive positive change, inspire awareness, and build a better future for generations to come.',
@@ -61,12 +62,13 @@
 		});
 
 		slider.splide.on('move', () => {
-			dynamicDesc = elephantUnionText[slider.splide.index];
+			console.log(slider.splide.index);
 		});
 
 		slider.splide.on('active', (e: any) => {
 			slider.splide.Components.Slides.get().forEach((e) => {
 				if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
+					dynamicDesc = elephantUnionText[e.index];
 					e.slide.classList.remove('unfocused_slide');
 					e.slide.classList.add('focused_slide');
 				} else {
