@@ -3,6 +3,7 @@
 	import close from '$lib/assets/close-logo.svg';
 	import CEBB_chart from '$lib/assets/CEBB-chart.png';
 	import arrow_up_icon from '$lib/assets/arrow-up-icon.svg';
+	import { closeModal } from 'svelte-modals';
 
 	import { onMount } from 'svelte';
 
@@ -28,7 +29,10 @@
 			>
 				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-3xl">{title}</h2>
-					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+
+					<button on:click={closeModal}>
+						<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+					</button>
 				</div>
 
 				<p class="font-light">{message}</p>
@@ -41,7 +45,9 @@
 			>
 				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-3xl">$ {title}</h2>
-					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+					<button on:click={closeModal}>
+						<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+					</button>
 				</div>
 
 				<p class="font-light">
@@ -63,7 +69,9 @@
 			>
 				<div class="flex items-center justify-between w-full">
 					<h2 class="font-bold text-5xl">{title}</h2>
-					<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+					<button on:click={closeModal}>
+						<img class="hover:cursor-pointer object-none" src={close} alt="modal-close-btn" />
+					</button>
 				</div>
 
 				<ul>
@@ -87,8 +95,7 @@
 		justify-content: center;
 		align-items: center;
 
-		/* allow click-through to backdrop */
-		pointer-events: none;
+		pointer-events: auto;
 		z-index: 40;
 	}
 </style>

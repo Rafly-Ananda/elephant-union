@@ -218,7 +218,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[40%] md:left-[25%] lg:left-48 transform -translate-y-1/2 right-0"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
 						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
 						Chapter 1
@@ -257,7 +257,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-[40%] md:right-1/2 lg:right-48"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
 						on:click={() => handleOpen(roadmap_modal_content[1])}
 					>
 						Chapter 2
@@ -293,7 +293,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[40%] md:left-[25%] lg:left-48 transform -translate-y-1/2 right-0"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
 						on:click={() => handleOpen(roadmap_modal_content[2])}
 					>
 						Chapter 3
@@ -328,7 +328,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-0 transform -translate-y-1/2 right-[40%] md:right-1/2 lg:right-48"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
 						on:click={() => handleOpen(roadmap_modal_content[3])}
 					>
 						Chapter 4

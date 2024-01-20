@@ -47,15 +47,6 @@
 	</div>
 	<!-- Right Side -->
 	<div class="w-full h-[261px] md:h-[361px]">
-		<!-- <iframe
-			class="w-full h-full rounded-xl"
-			src="https://www.youtube.com/embed/SHj2kJzVi_g"
-			title="Raisa - Kali Kedua (Official Music Video)"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			allowfullscreen
-		></iframe> -->
-
 		<iframe
 			class="w-full h-full rounded-xl"
 			src="https://www.youtube.com/embed/Yich12ZEl-Y"

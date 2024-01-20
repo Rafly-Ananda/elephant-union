@@ -44,9 +44,12 @@
 			alt="Hero logo"
 			src={hero}
 		/>
-		<div class="w-screen flex items-center justify-center absolute -bottom-10">
-			<button on:click|preventDefault={() => scrollIntoView('roadmap')}>
-				<img src={scroll_down_arrow} class=" animate-bounce" alt="scroll down button" />
+		<div class="w-screen flex items-center justify-center absolute -bottom-7 z-20">
+			<button
+				on:click|preventDefault={() => scrollIntoView('roadmap')}
+				class=" hover:cursor-pointer"
+			>
+				<img src={scroll_down_arrow} class="animate-bounce" alt="scroll down button" />
 			</button>
 		</div>
 	</div>
