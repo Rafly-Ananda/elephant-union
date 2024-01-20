@@ -15,9 +15,9 @@
 }
 
 .focused_slide {
-	border: 2px solid red;
+	transform: scale(1.2, 1.2);
 }
 
 .unfocused_slide {
-	border: 2px solid blue;
+	transform: scale(0.8, 0.8);
 }

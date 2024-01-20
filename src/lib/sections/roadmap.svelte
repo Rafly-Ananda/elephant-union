@@ -160,10 +160,10 @@
 				class="flex items-center justify-around rounded-lg gap-2 w-fit bg-white p-2 mt-5 md:mt-0"
 			>
 				<div class="flex items-center justify-center px-2">
-					<p class="font-grotesk w-full">Listing on:</p>
+					<p class="font-grotesk w-full text-xs">Listing on:</p>
 					<img alt="Algorand" class="w-full" src={algorand_logo} />
 				</div>
-				<button class="px-10 py-3 bg-[#00DF8E] rounded-lg font-bold font-grotesk md:text-lg">
+				<button class="p-5 md:px-10 py-3 bg-[#00DF8E] rounded-lg font-bold font-grotesk md:text-lg">
 					Mint Now
 				</button>
 			</div>
@@ -337,9 +337,15 @@
 				<!-- /End Milestone 4 -->
 			</div>
 		</div>
-		<div class="flex items-center justify-center mt-10 font-grotesk">
+		<div
+			class="flex items-center flex-col md:flex-row justify-center mt-10 font-grotesk gap-0 md:gap-1"
+		>
 			<h4 class="text-[16px] font-light leading-7 text-white text-center">
-				We have Encyclopedia (Whitepaper) too, on <span class="font-bold text-[#00DF8E] underline"
+				We have Encyclopedia (Whitepaper) too,
+			</h4>
+
+			<h4 class="text-[16px] font-light leading-7 text-white text-center">
+				on <span class="font-bold text-[#00DF8E] underline"
 					>GitBook <img class="inline-block" alt="arrow-up-icon" src={arrow_up_icon} />
 				</span>
 			</h4>

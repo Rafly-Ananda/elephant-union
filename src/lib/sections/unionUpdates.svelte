@@ -5,6 +5,8 @@
 
 	let selectedUpdatesNav: string = 'Monthly Update';
 
+	import hero from '$lib/assets/hero.png';
+
 	const updateNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	const annoucementNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	const events = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -23,7 +25,7 @@
 		<div class="w-full h-full">
 			<img
 				class="w-full h-full object-fill rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl"
-				src={delete_me_later_2}
+				src={hero}
 				alt="delete-me-later"
 			/>
 		</div>

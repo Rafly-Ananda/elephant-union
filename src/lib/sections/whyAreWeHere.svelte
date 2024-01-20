@@ -12,6 +12,9 @@
 	import why_5 from '$lib/assets/why-5.JPG';
 	import { slide } from 'svelte/transition';
 
+	import arrow_left from '$lib/assets/arrow-left.svg';
+	import arrow_right from '$lib/assets/arrow-right.svg';
+
 	const why_are_we_here_assets = [why_1, why_2, why_3, why_4, why_5];
 
 	let slider: Splide;
@@ -20,11 +23,10 @@
 		rewind: true,
 		type: 'loop',
 		perMove: 1,
-		perPage: 5,
+		perPage: 3,
 		focus: 'center',
-		gap: '1rem',
-		pagination: false,
-		arrows: false
+		gap: '0.75rem',
+		drag: 'free'
 	};
 
 	let dynamicDesc: string;
@@ -38,35 +40,52 @@
 		"Web3 at Elephant Union is not just about technology; it's a celebration!"
 	];
 
+	const onArtworkCarouselClickAdvance = () => {
+		slider.splide.go('<');
+	};
+	const onArtworkCarouselClickBack = () => {
+		slider.splide.go('>');
+	};
+
 	onMount(() => {
 		dynamicDesc = elephantUnionText[0];
+
+		slider.splide.Components.Slides.get().forEach((e) => {
+			if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
+				e.slide.classList.remove('unfocused_slide');
+				e.slide.classList.add('focused_slide');
+			} else {
+				e.slide.classList.remove('focused_slide');
+				e.slide.classList.add('unfocused_slide');
+			}
+		});
 
 		slider.splide.on('move', () => {
 			dynamicDesc = elephantUnionText[slider.splide.index];
 		});
 
-		// slider.splide.on('active', (e: any) => {
-		// 	slider.splide.Components.Slides.get().forEach((e) => {
-		// 		if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
-		// 			e.slide.classList.remove('unfocused_slide');
-		// 			e.slide.classList.add('focused_slide');
-		// 		} else {
-		// 			e.slide.classList.remove('focused_slide');
-		// 			e.slide.classList.add('unfocused_slide');
-		// 		}
-		// 	});
-		// });
+		slider.splide.on('active', (e: any) => {
+			slider.splide.Components.Slides.get().forEach((e) => {
+				if (e.slide.classList.contains('is-active') && e.slide.classList.contains('is-visible')) {
+					e.slide.classList.remove('unfocused_slide');
+					e.slide.classList.add('focused_slide');
+				} else {
+					e.slide.classList.remove('focused_slide');
+					e.slide.classList.add('unfocused_slide');
+				}
+			});
+		});
 	});
 </script>
 
 <h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold font-graphik">(Why) are we here</h1>
 
 <!-- Carousel Track -->
-<div class=" w-[1500px] md:w-[2500px] mt-10 md:mt-[80px] px-[64px]">
+<div class="w-[1000px] md:w-[2500px] mt-10 md:mt-[80px] px-[64px]">
 	<Splide {options} bind:this={slider}>
 		{#each why_are_we_here_assets as item, index (index + item)}
-			<SplideSlide>
-				<img class="rounded-md" src={item} alt={'asd'} />
+			<SplideSlide class=" w-full h-full ">
+				<img class="" src={item} alt={'asd'} />
 			</SplideSlide>
 		{/each}
 	</Splide>
@@ -77,6 +96,20 @@
 >
 	<q>{dynamicDesc}</q>
 </p>
+
+<!-- <button
+	class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer z-10 -left-6 top-[50%]"
+	on:click={onArtworkCarouselClickAdvance}
+>
+	<img class="w-2/4 object-none md:w-full" alt="arrow-left" src={arrow_left} />
+</button>
+
+<button
+	class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer z-10 -right-6 top-[50%]"
+	on:click={onArtworkCarouselClickBack}
+>
+	<img class="w-2/4 object-none md:w-full" alt="arrow-right" src={arrow_right} />
+</button> -->
 
 <style>
 </style>

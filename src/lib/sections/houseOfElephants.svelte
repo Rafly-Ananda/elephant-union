@@ -18,10 +18,10 @@
 	<!-- Badges -->
 
 	<div
-		class="w-full h-full flex items-center justify-center flex-wrap lg:flex-nowrap mt-5 md:mt-20 hover:cursor-pointer"
+		class="w-full h-full flex items-center justify-center mt-5 md:mt-20 hover:cursor-pointer gap-4 md:gap-16 p-6"
 	>
 		{#each hoe_items as item, index (index + item)}
-			<img class="w-1/3 lg:w-full lg:h-full md:object-none" alt={item} src={item} />
+			<img alt={item} src={item} />
 		{/each}
 	</div>
 

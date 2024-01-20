@@ -8,7 +8,7 @@
 	import linkedin from '$lib/assets/linkedin.svg';
 	import youtube from '$lib/assets/youtube.svg';
 
-	let footer_info_nav = ['About Us', 'Articles', 'Careers', 'FAQs', 'NFT Collections'];
+	let footer_info_nav = ['About Us', 'Articles', 'Careers', 'FAQs'];
 
 	let email = '';
 
@@ -21,7 +21,11 @@
 	<div class="w-full flex-col lg:flex-row flex items-start justify-between gap-10 lg:gap-20">
 		<!-- Elephant Union -->
 		<div class=" w-full flex flex-col items-center lg:block justify-center lg:w-[322px]">
-			<img class="w-2/4" src={elephant_union_logo_footer} alt="elephant-union-footer-logo" />
+			<img
+				class="w-[35%] md:w-2/4"
+				src={elephant_union_logo_footer}
+				alt="elephant-union-footer-logo"
+			/>
 			<p class="font-light text-sm mt-5 text-center lg:text-left">
 				Real-world Web3 bridges economy, biodiversity, and tourism for meaningfull purposes for
 				Elephant Conservation.
@@ -32,9 +36,9 @@
 		<div class="w-full flex flex-col items-center justify-center lg:block lg:w-[150px]">
 			<h6 class="text-lg font-bold">Information</h6>
 
-			<ul class="flex flex-col items-center justify-center lg:block">
+			<ul class="flex flex-wrap gap-5 items-center justify-center lg:block pt-5">
 				{#each footer_info_nav as item, index (item + index)}
-					<li class="mt-4"><a class="font-light" href="#">{item}</a></li>
+					<li class="mt-0 md:mb-2"><a class="font-light" href="#">{item}</a></li>
 				{/each}
 			</ul>
 		</div>
@@ -63,11 +67,15 @@
 			<div
 				class="w-full h-full flex justify-between bg-white rounded-xl mt-5 text-black p-2 font-grotesk"
 			>
-				<input bind:value={email} class="text-xs" placeholder="Enter your email address.." />
+				<input
+					bind:value={email}
+					class="text-xs md:text-[7px] 2xl:text-[12px]"
+					placeholder="Enter your email address.."
+				/>
 				<div
-					class="cursor-pointer bg-[#00DF8E] flex items-center justify-center py-1 px-4 rounded-md"
+					class="cursor-pointer bg-[#00DF8E] flex items-center justify-center py-1 px-2 rounded-md"
 				>
-					<p class="text-sm font-medium md:leading-6 font-grotesk">Subscribe Now</p>
+					<p class=" text-[8px] 2xl:text-[12px] font-medium font-grotesk">Subscribe Now</p>
 				</div>
 			</div>
 		</div>
