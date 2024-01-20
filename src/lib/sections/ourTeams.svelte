@@ -20,66 +20,6 @@
 		assets: string;
 	}
 
-	let our_teams_compact_desktop: ourTeamType[] = [
-		{
-			name: 'Boy',
-			title: 'Community',
-			achievements: ['president director oxlabs', 'director coinfolks'],
-			assets: team_1
-		},
-		{
-			name: 'Adrian',
-			title: 'Advisory',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
-		},
-		{
-			name: 'Zach',
-			title: 'Artist',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
-		},
-		{
-			name: 'Rafly',
-			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
-		},
-		{
-			name: 'Arnold',
-			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
-		}
-	];
-
-	let our_teams_compact_mobile: ourTeamType[] = [
-		{
-			name: 'Boy',
-			title: 'Community',
-			achievements: ['president director oxlabs', 'director coinfolks'],
-			assets: team_1
-		},
-		{
-			name: 'Adrian',
-			title: 'Advisory',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
-		},
-		{
-			name: 'Zach',
-			title: 'Artist',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
-		},
-		{
-			name: 'Rafly',
-			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
-		}
-	];
-
 	let our_teams_full: ourTeamType[] = [
 		{
 			name: 'Boy',
@@ -158,7 +98,7 @@
 	<div
 		class="w-full h-full md:flex flex-wrap items-center justify-center gap-4 mt-7 lg:mt-[75px] hidden"
 	>
-		{#each showMoreTeam ? our_teams_full : our_teams_compact_desktop as item, index (item.name + index)}
+		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 5) as item, index (item.name + index)}
 			<div
 				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
 			>
@@ -188,7 +128,7 @@
 	<div
 		class="w-full h-full items-center justify-center gap-4 mt-7 lg:mt-[75px] flex flex-wrap md:hidden"
 	>
-		{#each showMoreTeam ? our_teams_full : our_teams_compact_mobile as item, index (item.name + index)}
+		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 4) as item, index (item.name + index)}
 			<div
 				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
 			>

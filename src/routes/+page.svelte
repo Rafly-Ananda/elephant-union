@@ -44,7 +44,7 @@
 			alt="Hero logo"
 			src={hero}
 		/>
-		<div class="w-screen flex items-center justify-center">
+		<div class="w-screen flex items-center justify-center absolute -bottom-10">
 			<button on:click|preventDefault={() => scrollIntoView('roadmap')}>
 				<img src={scroll_down_arrow} class=" animate-bounce" alt="scroll down button" />
 			</button>
