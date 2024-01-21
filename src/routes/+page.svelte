@@ -2,7 +2,6 @@
 	import '@splidejs/svelte-splide/css';
 
 	import hero from '$lib/assets/hero.png';
-	import scroll_down_arrow from '$lib/assets/scroll-down-arrow.png';
 	import scroll_down_arrow_round from '$lib/assets/scroll-down-arrow-round.png';
 
 	import { onMount } from 'svelte';
@@ -24,16 +23,7 @@
 	} from '$lib';
 
 	import { Modals, closeModal } from 'svelte-modals';
-
 	import { fade } from 'svelte/transition';
-
-	function scrollIntoView(sectionId: string) {
-		const el = document.querySelector(`#${sectionId}`);
-		if (!el) return;
-		el.scrollIntoView({
-			behavior: 'smooth'
-		});
-	}
 
 	const words = [
 		'Real-world Web3 bridging economy, biodiversity, and tourism for meaningful Elephant Conservation purposes.'
@@ -41,22 +31,29 @@
 	let i = 0;
 	let j = 0;
 	let currentWord = '';
-	let isDeleting = false;
 
-	function type() {
+	const scrollIntoView = (sectionId: string) => {
+		const el = document.querySelector(`#${sectionId}`);
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	};
+
+	const typeWriterFnc = () => {
 		currentWord = words[i];
+		const typewriterElement = document.getElementById('typewriter');
 
-		document.getElementById('typewriter').textContent = currentWord.substring(0, j + 1);
-		j++;
-		if (j == currentWord.length) {
-			isDeleting = true;
+		if (typewriterElement !== null) {
+			typewriterElement.textContent = currentWord.substring(0, j + 1);
+			j++;
 		}
 
-		setTimeout(type, 100);
-	}
+		setTimeout(typeWriterFnc, 100);
+	};
 
 	onMount(() => {
-		type();
+		typeWriterFnc();
 	});
 </script>
 
