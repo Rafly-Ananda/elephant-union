@@ -186,9 +186,10 @@
 				</div>
 
 				<!-- #Start Milestone 1 -->
-				<button
+				<div
 					class="w-full relative z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
 					on:click={() => handleOpen(roadmap_modal_content[0])}
+					role="presentation"
 				>
 					<div class="absolute w-2/4 h-full left-0">
 						<div
@@ -220,7 +221,7 @@
 					>
 						Chapter 1
 					</button>
-				</button>
+				</div>
 				<!-- /End Milestone 1 -->
 
 				<!-- #Start Milestone 2 -->
