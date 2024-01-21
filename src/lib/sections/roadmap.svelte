@@ -200,14 +200,10 @@
 						></div>
 
 						<div
-							class="w-[70%] md:w-2/4 h-full flex flex-col items-center justify-center absolute left-0 pr-2"
+							class="w-[70%] md:w-2/4 h-full flex items-center justify-center absolute left-0 pr-2"
 						>
 							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
-								First Step to Humanity
-							</h3>
-
-							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
-								(2022-2023)
+								First Step to Humanity (2022-2023)
 							</h3>
 						</div>
 					</div>
