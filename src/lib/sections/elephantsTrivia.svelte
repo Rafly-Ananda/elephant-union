@@ -2,8 +2,8 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import type { Options } from '@splidejs/svelte-splide';
 
-	import arrow_left from '$lib/assets/arrow-left.svg';
-	import arrow_right from '$lib/assets/arrow-right.svg';
+	import arrow_left from '$lib/assets/arrow-left.png';
+	import arrow_right from '$lib/assets/arrow-right.png';
 	import delete_me_later from '$lib/assets/delete_me_later.png';
 
 	const options: Options = {

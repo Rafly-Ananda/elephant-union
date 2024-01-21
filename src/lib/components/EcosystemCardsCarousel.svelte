@@ -3,8 +3,8 @@
 	import type { Options } from '@splidejs/svelte-splide';
 	import { onMount } from 'svelte';
 	import arrow_up_white from '$lib/assets/arrow-up-white.svg';
-	import arrow_left from '$lib/assets/arrow-left.svg';
-	import arrow_right from '$lib/assets/arrow-right.svg';
+	import arrow_left from '$lib/assets/arrow-left.png';
+	import arrow_right from '$lib/assets/arrow-right.png';
 
 	interface assetsListInterface {
 		assets: string;

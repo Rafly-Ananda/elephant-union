@@ -5,17 +5,16 @@
 	import { onMount } from 'svelte';
 
 	// (Why) are we here photos
-	import why_1 from '$lib/assets/why-1.JPG';
-	import why_2 from '$lib/assets/why-2.JPG';
-	import why_3 from '$lib/assets/why-3.JPG';
-	import why_4 from '$lib/assets/why-4.JPG';
-	import why_5 from '$lib/assets/why-5.JPG';
+	import why_1 from '$lib/assets/why-1.png';
+	import why_2 from '$lib/assets/why-2.png';
+	import why_3 from '$lib/assets/why-3.png';
+
 	import { slide } from 'svelte/transition';
 
-	import arrow_left from '$lib/assets/arrow-left.svg';
-	import arrow_right from '$lib/assets/arrow-right.svg';
+	import arrow_left from '$lib/assets/arrow-left.png';
+	import arrow_right from '$lib/assets/arrow-right.png';
 
-	const why_are_we_here_assets = [why_1, why_2, why_3, why_4, why_5];
+	const why_are_we_here_assets = [why_1, why_2, why_3];
 
 	let slider: Splide;
 

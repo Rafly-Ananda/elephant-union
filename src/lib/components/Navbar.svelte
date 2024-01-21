@@ -7,7 +7,7 @@
 >
 	<div class="w-full flex items-start justify-between md:items-center md:justify-center">
 		<div class="w-[50%] h-[50%]">
-			<img class="" alt="The project logo" src={elephant_union_logo_footer} />
+			<img class="lg:w-[35%]" alt="The project logo" src={elephant_union_logo_footer} />
 		</div>
 
 		<div
@@ -24,7 +24,7 @@
 					<p class="text-xs md:text-[16px] font-medium md:leading-6 font-grotesk">Sign Up</p>
 				</div>
 				<div
-					class="cursor-pointer bg-[#00DF8E] flex items-center justify-center py-1 px-4 rounded-md"
+					class="cursor-pointer bg-black opacity-30 text-white flex items-center justify-center py-1 px-4 rounded-md transition ease-in-out delay-150 hover:scale-110 duration-300 mr-1"
 				>
 					<p class=" text-xs md:text-[16px] font-medium md:leading-6 font-grotesk">Login</p>
 				</div>

@@ -38,7 +38,7 @@
 
 			<ul class="flex flex-wrap gap-5 items-center justify-center lg:block pt-5">
 				{#each footer_info_nav as item, index (item + index)}
-					<li class="mt-0 md:mb-2"><a class="font-light" href="#">{item}</a></li>
+					<li class="mt-0 md:mb-2"><a class="font-light text-[#b2b2b2]" href="#">{item}</a></li>
 				{/each}
 			</ul>
 		</div>
@@ -73,7 +73,7 @@
 					placeholder="Enter your email address.."
 				/>
 				<div
-					class="cursor-pointer bg-[#00DF8E] flex items-center justify-center py-1 px-2 rounded-md"
+					class="cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300 mr-1 text-white flex items-center justify-center py-1 px-2 rounded-md bg-black opacity-30"
 				>
 					<p class=" text-[8px] 2xl:text-[12px] font-medium font-grotesk">Subscribe Now</p>
 				</div>

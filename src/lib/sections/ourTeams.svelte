@@ -1,85 +1,158 @@
 <script lang="ts">
 	// Were seen on
-	import team_1 from '$lib/assets/team_boy.png';
-	import team_2 from '$lib/assets/team_zachary.png';
-	import team_3 from '$lib/assets/team_rafly.png';
-	import team_4 from '$lib/assets/team_tsalis.png';
-	import team_5 from '$lib/assets/team_bli_tony.png';
+	import team_boy from '$lib/assets/team_boy.png';
+	import team_adrian from '$lib/assets/team_zachary.png';
+	import team_rafly from '$lib/assets/team_rafly.png';
+	import team_tsalis from '$lib/assets/team_tsalis.png';
+	import team_bli_tony from '$lib/assets/team_bli_tony.png';
+	import team_zach from '$lib/assets/team_zach.png';
+	import team_heimdalm from '$lib/assets/team_heilmdalm.png';
+	import team_silvi from '$lib/assets/team_silvi.png';
+	import team_arnold from '$lib/assets/team_arnold.png';
+	import team_xav from '$lib/assets/team_shafly.png';
 
 	// Social Media Logos
 	import instagram from '$lib/assets/instagram.svg';
 	import x from '$lib/assets/x.svg';
 	import linkedin from '$lib/assets/linkedin.svg';
 
-	const social_media_logos = [x, instagram, linkedin];
-
 	interface ourTeamType {
 		name: string;
 		title: string;
-		achievements: string[];
+		socialMediaLinks: {
+			x: string;
+			insta: string;
+			linkedIn: string;
+			[key: string]: string;
+		};
 		assets: string;
 	}
+
+	interface socialMediaLogosType {
+		assets: string;
+		title: string;
+	}
+
+	const social_media_logos: socialMediaLogosType[] = [
+		{
+			assets: x,
+			title: 'x'
+		},
+		{
+			assets: instagram,
+			title: 'insta'
+		},
+		{
+			assets: linkedin,
+			title: 'linkedIn'
+		}
+	];
 
 	let our_teams_full: ourTeamType[] = [
 		{
 			name: 'Boy',
 			title: 'Community',
-			achievements: ['president director oxlabs', 'director coinfolks'],
-			assets: team_1
+			socialMediaLinks: {
+				x: 'https://x.com/muhfauzanis?s=21',
+				insta: 'https://www.instagram.com/muhfauzanis?igsh=a2RxZWlkdDZmMTN5&utm_source=qr',
+				linkedIn:
+					'https://www.linkedin.com/in/muhfauzanis?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+			},
+			assets: team_boy
 		},
 		{
 			name: 'Adrian',
 			title: 'Advisory',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
+			socialMediaLinks: {
+				x: 'https://x.com/thezakhary?s=21',
+				insta: 'https://www.instagram.com/thezakhary?igsh=MXhwamZ2Z3NkeDU4aA==',
+				linkedIn:
+					'https://www.linkedin.com/in/adrian-z-51660940?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+			},
+			assets: team_adrian
 		},
 		{
-			name: 'Zach',
+			name: 'Zadk',
 			title: 'Artist',
-			achievements: ['independent commisioner ptpn viii', 'founder majalabs group'],
-			assets: team_2
+			socialMediaLinks: {
+				x: '',
+				insta: 'https://www.instagram.com/dzak_dzi?igsh=YWdocDNzNXNnNWcy',
+				linkedIn: ''
+			},
+			assets: team_zach
 		},
 		{
 			name: 'Rafly',
 			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
+			socialMediaLinks: {
+				x: '',
+				insta: 'https://www.instagram.com/rafly_ananda15/',
+				linkedIn: 'https://www.linkedin.com/in/rafly-ananda-soemantri/'
+			},
+			assets: team_rafly
 		},
 		{
 			name: 'Arnold',
 			title: 'Technolgy',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
+			socialMediaLinks: {
+				x: '',
+				insta: 'https://www.instagram.com/arnold.pstr?igsh=dmI0d2s3OHlncDFs',
+				linkedIn:
+					'https://www.linkedin.com/in/arnold-sianturi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+			},
+			assets: team_arnold
 		},
 		{
 			name: 'Xav',
 			title: 'Blockchain',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
+			socialMediaLinks: {
+				x: 'https://x.com/shaflyhmz?s=21',
+				insta: 'https://www.instagram.com/shaflyh?igsh=MWE4N3VhaG55b2pwNw==',
+				linkedIn:
+					'https://www.linkedin.com/in/shafly-hamzah?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+			},
+			assets: team_xav
 		},
 		{
-			name: 'Heimdalm',
+			name: 'Adam.G',
 			title: 'Creative',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
+			socialMediaLinks: {
+				x: 'https://twitter.com/dummypng',
+				insta: 'https://www.instagram.com/adamghfr_/',
+				linkedIn: 'https://www.linkedin.com/in/adam-ghifari/'
+			},
+			assets: team_heimdalm
 		},
 		{
 			name: 'Silvi',
 			title: 'Media',
-			achievements: ['engineer btpn jenius', 'technology director oxlabs'],
-			assets: team_3
+			socialMediaLinks: {
+				x: 'https://x.com/silvianurrahmaw?s=21',
+				insta: 'https://www.instagram.com/silvianurrahmawt?igsh=MXJqNTBxcjFsZDd5dg==',
+				linkedIn: ''
+			},
+			assets: team_silvi
 		},
 		{
 			name: 'Tsalis',
 			title: 'Architect - Contractor',
-			achievements: ['founder imah studio'],
-			assets: team_4
+			socialMediaLinks: {
+				x: '',
+				insta: 'https://www.instagram.com/rifqiabdu?igsh=OWxzZzZud3k1bW92',
+				linkedIn:
+					'https://www.linkedin.com/in/rifqi-abdurrahman-6b02a9150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+			},
+			assets: team_tsalis
 		},
 		{
 			name: 'Bli Tony',
 			title: 'Hospitality',
-			achievements: ['profesional guide way kambas national park', 'ex-cruise hospitality'],
-			assets: team_5
+			socialMediaLinks: {
+				x: '',
+				insta: 'https://www.instagram.com/bli.tony?igsh=MXU1aTlpcXhlNGthbg==',
+				linkedIn: ''
+			},
+			assets: team_bli_tony
 		}
 	];
 
@@ -98,28 +171,25 @@
 	<div
 		class="w-full h-full md:flex flex-wrap items-center justify-center gap-4 mt-7 lg:mt-[75px] hidden"
 	>
-		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 5) as item, index (item.name + index)}
+		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 5) as team, index_team (team.name + index_team)}
 			<div
 				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
 			>
-				<img src={item.assets} alt={item.name} class="rounded-t-xl" />
-				<div class=" py-2 px-4 md:p-5 w-full h-fit text-white">
-					<h5 class="font-bold text-xs md:text-base">{item.name}</h5>
-					<h6 class="text-[11px] md:text-sm">{item.title}</h6>
+				<img src={team.assets} alt={team.name} class="rounded-t-xl" />
+				<div
+					class=" py-2 px-4 md:p-5 w-full h-fit text-white flex flex-col items-center justify-center"
+				>
+					<h5 class="font-bold text-xs md:text-base">{team.name}</h5>
+					<h6 class="text-[11px] md:text-sm">{team.title}</h6>
 					<ul class="flex items-center justify-start md:mt-4 mt-2 opacity-75">
-						{#each social_media_logos as item, index (item + index)}
-							<a href=""><img class="w-[70%] md:w-[80%]" src={item} alt={item} /></a>
+						{#each social_media_logos as item, index (item.title + index)}
+							{#if team.socialMediaLinks[item.title] !== ''}
+								<a href={`${team.socialMediaLinks[item.title]}`}
+									><img class="w-[70%] md:w-[80%]" src={item.assets} alt={item.title} /></a
+								>
+							{/if}
 						{/each}
 					</ul>
-
-					<!-- <ul class="text-[10px] md:text-xs mt-2 md:mt-1 uppercase text-[#5F6980]">
-						{#each item.achievements as achv (item.name + achv)}
-							<li class="flex items-center">
-								<div class="w-[5px] h-[5px] rounded-full bg-[#5F6980] mr-2 flex-none"></div>
-								{achv}
-							</li>
-						{/each}
-					</ul> -->
 				</div>
 			</div>
 		{/each}
@@ -128,28 +198,25 @@
 	<div
 		class="w-full h-full items-center justify-center gap-4 mt-7 lg:mt-[75px] flex flex-wrap md:hidden"
 	>
-		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 4) as item, index (item.name + index)}
+		{#each showMoreTeam ? our_teams_full : our_teams_full.slice(0, 4) as team, index_team (team.name + index_team)}
 			<div
 				class="font-grotesk bg-[#232A32] w-[160px] h-[240px] md:w-[240px] md:h-[360px] rounded-xl"
 			>
-				<img src={item.assets} alt={item.name} class="rounded-t-xl" />
-				<div class=" py-2 px-4 md:p-5 w-full h-fit text-white">
-					<h5 class="font-bold text-xs md:text-base">{item.name}</h5>
-					<h6 class="text-[11px] md:text-sm">{item.title}</h6>
+				<img src={team.assets} alt={team.name} class="rounded-t-xl" />
+				<div
+					class=" py-2 px-4 md:p-5 w-full h-fit text-white flex flex-col items-center justify-center"
+				>
+					<h5 class="font-bold text-xs md:text-base">{team.name}</h5>
+					<h6 class="text-[11px] md:text-sm">{team.title}</h6>
 					<ul class="flex items-center justify-start md:mt-4 mt-2 opacity-75">
-						{#each social_media_logos as item, index (item + index)}
-							<a href=""><img class="w-[70%] md:w-[80%]" src={item} alt={item} /></a>
+						{#each social_media_logos as item, index (item.title + index)}
+							{#if team.socialMediaLinks[item.title] !== ''}
+								<a href={`${team.socialMediaLinks[item.title]}`}
+									><img class="w-[70%] md:w-[80%]" src={item.assets} alt={item.title} /></a
+								>
+							{/if}
 						{/each}
 					</ul>
-
-					<!-- <ul class="text-[10px] md:text-xs mt-2 md:mt-1 uppercase text-[#5F6980]">
-					{#each item.achievements as achv (item.name + achv)}
-						<li class="flex items-center">
-							<div class="w-[5px] h-[5px] rounded-full bg-[#5F6980] mr-2 flex-none"></div>
-							{achv}
-						</li>
-					{/each}
-				</ul> -->
 				</div>
 			</div>
 		{/each}

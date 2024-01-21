@@ -3,6 +3,9 @@
 
 	import hero from '$lib/assets/hero.png';
 	import scroll_down_arrow from '$lib/assets/scroll-down-arrow.png';
+	import scroll_down_arrow_round from '$lib/assets/scroll-down-arrow-round.png';
+
+	import { onMount } from 'svelte';
 
 	import {
 		Ecosystem,
@@ -31,6 +34,40 @@
 			behavior: 'smooth'
 		});
 	}
+
+	const words = [
+		'Real-world Web3 bridging economy, biodiversity, and tourism for meaningful Elephant Conservation purposes.'
+	];
+	let i = 0;
+	let j = 0;
+	let currentWord = '';
+	let isDeleting = false;
+
+	function type() {
+		currentWord = words[i];
+		if (isDeleting) {
+			document.getElementById('typewriter').textContent = currentWord.substring(0, j - 1);
+			j--;
+			if (j == 0) {
+				isDeleting = false;
+				i++;
+				if (i == words.length) {
+					i = 0;
+				}
+			}
+		} else {
+			document.getElementById('typewriter').textContent = currentWord.substring(0, j + 1);
+			j++;
+			if (j == currentWord.length) {
+				isDeleting = true;
+			}
+		}
+		setTimeout(type, 100);
+	}
+
+	onMount(() => {
+		type();
+	});
 </script>
 
 <main class="w-full h-full relative bg-[#232A32] overflow-hidden">
@@ -44,12 +81,28 @@
 			alt="Hero logo"
 			src={hero}
 		/>
-		<div class="w-screen flex items-center justify-center absolute -bottom-7 z-20">
+		<!-- <div class="w-screen flex items-center justify-center absolute -bottom-7 z-20">
 			<button
 				on:click|preventDefault={() => scrollIntoView('roadmap')}
 				class=" hover:cursor-pointer"
 			>
 				<img src={scroll_down_arrow} class="animate-bounce" alt="scroll down button" />
+			</button>
+		</div> -->
+
+		<div
+			class="w-[80%] md:w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center gap-10"
+		>
+			<h1
+				id="typewriter"
+				class="text-xl md:text-5xl font-bold text-center font-grotesk text-white"
+			></h1>
+
+			<button
+				on:click|preventDefault={() => scrollIntoView('roadmap')}
+				class=" hover:cursor-pointer"
+			>
+				<img src={scroll_down_arrow_round} class="animate-bounce" alt="scroll down button" />
 			</button>
 		</div>
 	</div>

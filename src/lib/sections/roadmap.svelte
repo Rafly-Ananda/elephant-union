@@ -3,8 +3,6 @@
 	import { Modal } from '$lib';
 
 	import union_collectibles from '$lib/assets/union-collectibles-logo.png';
-	import typography_union_collectibles from '$lib/assets/elephant-union-collectible-series.png';
-	import copy_collectibles from '$lib/assets/collectibles_copy.png';
 
 	// benefits-arts
 	import benefits_art from '$lib/assets/benefits-art.svg';
@@ -20,7 +18,6 @@
 	import milestone_point from '$lib/assets/milestone-point.svg';
 	import milestone_glowing_point from '$lib/assets/milestone-glowing-point.svg';
 	import milestone_dimmed_point from '$lib/assets/milestone-dimmed-point.svg';
-	import line from '$lib/assets/line.svg';
 	import arrow_up_icon from '$lib/assets/arrow-up-icon.svg';
 
 	interface benefitModalContentType {
@@ -139,7 +136,7 @@
 			<div class="flex gap-2 hover:cursor-pointer">
 				{#each benefit_modal_content as item, index (index + item.title)}
 					<button
-						class="w-full h-full rounded-md bg-white flex items-center justify-center"
+						class="w-full h-full rounded-md bg-white flex items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
 						on:click={() => handleOpen(item)}
 					>
 						<img class="w-[83px] h-[83px]" alt={item.title} src={item.art} />
@@ -163,7 +160,9 @@
 					<p class="font-grotesk w-full text-xs">Listing on:</p>
 					<img alt="Algorand" class="w-full" src={algorand_logo} />
 				</div>
-				<button class="p-5 md:px-10 py-3 bg-[#00DF8E] rounded-lg font-bold font-grotesk md:text-lg">
+				<button
+					class="p-5 md:px-10 py-3 bg-black opacity-30 rounded-lg font-bold font-grotesk md:text-lg transition ease-in-out delay-150 hover:scale-110 duration-300 mr-1 text-white"
+				>
 					Mint Now
 				</button>
 			</div>
@@ -187,7 +186,10 @@
 				</div>
 
 				<!-- #Start Milestone 1 -->
-				<div class="w-full relative z-0">
+				<button
+					class="w-full relative z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
+					on:click={() => handleOpen(roadmap_modal_content[0])}
+				>
 					<div class="absolute w-2/4 h-full left-0">
 						<div
 							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
@@ -210,7 +212,7 @@
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[0])}>
+					<button>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
@@ -219,15 +221,17 @@
 					</button>
 					<button
 						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
-						on:click={() => handleOpen(roadmap_modal_content[0])}
 					>
 						Chapter 1
 					</button>
-				</div>
+				</button>
 				<!-- /End Milestone 1 -->
 
 				<!-- #Start Milestone 2 -->
-				<div class="w-full relative mt-32 z-0">
+				<button
+					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
+					on:click={() => handleOpen(roadmap_modal_content[1])}
+				>
 					<div class="absolute w-2/4 h-full right-0">
 						<div
 							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
@@ -249,7 +253,7 @@
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[1])}>
+					<button>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
@@ -258,15 +262,17 @@
 					</button>
 					<button
 						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
-						on:click={() => handleOpen(roadmap_modal_content[1])}
 					>
 						Chapter 2
 					</button>
-				</div>
+				</button>
 				<!-- /End Milestone 2 -->
 
 				<!-- #Start Milestone 3 -->
-				<div class="w-full relative mt-32 z-0">
+				<button
+					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
+					on:click={() => handleOpen(roadmap_modal_content[2])}
+				>
 					<div class="absolute w-2/4 h-full left-0">
 						<div
 							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
@@ -285,24 +291,26 @@
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[2])}>
+					<button>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
-							src={milestone_point}
+							src={milestone_dimmed_point}
 						/>
 					</button>
 					<button
 						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
-						on:click={() => handleOpen(roadmap_modal_content[2])}
 					>
 						Chapter 3
 					</button>
-				</div>
+				</button>
 				<!-- /End Milestone 3 -->
 
 				<!-- #Start Milestone 4 -->
-				<div class="w-full relative mt-32 z-0">
+				<button
+					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
+					on:click={() => handleOpen(roadmap_modal_content[3])}
+				>
 					<div class="absolute w-2/4 h-full right-0">
 						<div
 							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
@@ -320,20 +328,19 @@
 						</div>
 					</div>
 
-					<button on:click={() => handleOpen(roadmap_modal_content[3])}>
+					<button>
 						<img
 							class="hover:cursor-pointer w-fit object-none z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							alt=" milestone-point-1 "
-							src={milestone_point}
+							src={milestone_dimmed_point}
 						/>
 					</button>
 					<button
 						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
-						on:click={() => handleOpen(roadmap_modal_content[3])}
 					>
 						Chapter 4
 					</button>
-				</div>
+				</button>
 				<!-- /End Milestone 4 -->
 			</div>
 		</div>

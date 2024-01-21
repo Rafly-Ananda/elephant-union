@@ -1,11 +1,9 @@
 <script lang="ts">
-	import delete_me_later_2 from '$lib/assets/delete_me_later_2.JPG';
+	import union_update_hero from '$lib/assets/union-update-hero.png';
 
 	let updates_nav = ['Monthly Update', 'Annoucement', 'Events'];
 
 	let selectedUpdatesNav: string = 'Monthly Update';
-
-	import hero from '$lib/assets/hero.png';
 
 	const updateNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	const annoucementNews = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -25,7 +23,7 @@
 		<div class="w-full h-full">
 			<img
 				class="w-full h-full object-fill rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl"
-				src={hero}
+				src={union_update_hero}
 				alt="delete-me-later"
 			/>
 		</div>

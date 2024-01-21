@@ -8,7 +8,18 @@
 	import hoe_tangkahan from '$lib/assets/hoe-tangkahan.png';
 	import hoe_tesso_nilo from '$lib/assets/hoe-tesso-nilo.png';
 
-	let hoe_items = [hoe_way_kambas, hoe_bandung, hoe_bali, hoe_tangkahan, hoe_tesso_nilo];
+	interface hoeItemsType {
+		assets: string;
+		title: string;
+	}
+
+	let hoe_items: hoeItemsType[] = [
+		{ title: 'way_kambas', assets: hoe_way_kambas },
+		{ title: 'bandung', assets: hoe_bandung },
+		{ title: 'bali', assets: hoe_bali },
+		{ title: 'tangkahan', assets: hoe_tangkahan },
+		{ title: 'tesso_nilo', assets: hoe_tesso_nilo }
+	];
 </script>
 
 <div class="w-full h-full flex flex-col">
@@ -20,8 +31,16 @@
 	<div
 		class="w-full h-full flex items-center justify-center mt-5 md:mt-20 hover:cursor-pointer gap-4 md:gap-16 p-6"
 	>
-		{#each hoe_items as item, index (index + item)}
-			<img alt={item} src={item} />
+		{#each hoe_items as item, index (index + item.title)}
+			<img
+				alt={item.title}
+				src={item.assets}
+				class={`${
+					item.title === 'way_kambas'
+						? 'transition ease-in-out delay-150 hover:scale-110 duration-300'
+						: 'hover:animate-[wiggle_1s_ease-in-out_infinite]'
+				}`}
+			/>
 		{/each}
 	</div>
 
