@@ -225,9 +225,10 @@
 				<!-- /End Milestone 1 -->
 
 				<!-- #Start Milestone 2 -->
-				<button
+				<div
 					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
 					on:click={() => handleOpen(roadmap_modal_content[1])}
+					role="presentation"
 				>
 					<div class="absolute w-2/4 h-full right-0">
 						<div
@@ -262,13 +263,14 @@
 					>
 						Chapter 2
 					</button>
-				</button>
+				</div>
 				<!-- /End Milestone 2 -->
 
 				<!-- #Start Milestone 3 -->
-				<button
+				<div
 					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
 					on:click={() => handleOpen(roadmap_modal_content[2])}
+					role="presentation"
 				>
 					<div class="absolute w-2/4 h-full left-0">
 						<div
@@ -300,13 +302,14 @@
 					>
 						Chapter 3
 					</button>
-				</button>
+				</div>
 				<!-- /End Milestone 3 -->
 
 				<!-- #Start Milestone 4 -->
-				<button
+				<div
 					class="w-full relative mt-32 z-0 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-110 duration-300"
 					on:click={() => handleOpen(roadmap_modal_content[3])}
+					role="presentation"
 				>
 					<div class="absolute w-2/4 h-full right-0">
 						<div
@@ -337,7 +340,7 @@
 					>
 						Chapter 4
 					</button>
-				</button>
+				</div>
 				<!-- /End Milestone 4 -->
 			</div>
 		</div>
