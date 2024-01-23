@@ -5,16 +5,19 @@
 	import { onMount } from 'svelte';
 
 	// (Why) are we here photos
-	import why_1 from '$lib/assets/why-1.png';
-	import why_2 from '$lib/assets/why-2.png';
-	import why_3 from '$lib/assets/why-3.png';
+	import why_1 from '$lib/assets/why_are_we_here/why-1.png';
+	import why_2 from '$lib/assets/why_are_we_here/why-2.png';
+	import why_3 from '$lib/assets/why_are_we_here/why-3.png';
+	import why_4 from '$lib/assets/why_are_we_here/why-5.png';
+	import why_5 from '$lib/assets/why_are_we_here/why-9.png';
+	import why_6 from '$lib/assets/why_are_we_here/why-10.png';
 
 	import { slide } from 'svelte/transition';
 
 	import arrow_left from '$lib/assets/arrow-left.png';
 	import arrow_right from '$lib/assets/arrow-right.png';
 
-	const why_are_we_here_assets = [why_1, why_2, why_3];
+	const why_are_we_here_assets = [why_1, why_2, why_3, why_4, why_5, why_6];
 
 	let slider: Splide;
 
@@ -35,9 +38,9 @@
 		'Elephant Union is here to drive positive change, inspire awareness, and build a better future for generations to come.',
 		'We believe in the power of education to transform lives.',
 		'Connecting various perspectives through conversations within this industry.',
-		'We believe a strong and healthy community or movement is one that can sustain itself.',
+		"Web3 at Elephant Union is not just about technology; it's a celebration!",
 		'Focuses on maximizing technology and art innovation as a solution platform for our movement.',
-		"Web3 at Elephant Union is not just about technology; it's a celebration!"
+		'We believe a strong and healthy community or movement is one that can sustain itself.'
 	];
 
 	const onArtworkCarouselClickAdvance = () => {

@@ -45,9 +45,9 @@
 	class="w-full px-6 2xl:px-[290px] h-full flex flex-col items-center justify-center mt-10 md:mt-[100px] lg:mt-[177px]"
 >
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-graphik font-extrabold">Our Friends</h1>
-	<div class="w-full h-full grid grid-cols-6 gap-2 lg:gap-20 mt-5 lg:mt-[57px]">
+	<div class="w-full h-full grid grid-cols-6 gap-2 lg:gap-10 mt-5 lg:mt-[57px]">
 		{#each our_friends as item, index (item + index)}
-			<div class="flex items-center justify-center">
+			<div class="flex items-center justify-center bg-[#e2e0d6] rounded-xl px-2">
 				<img src={item} alt={item} />
 			</div>
 		{/each}

@@ -4,7 +4,35 @@
 
 	import arrow_left from '$lib/assets/arrow-left.png';
 	import arrow_right from '$lib/assets/arrow-right.png';
-	import delete_me_later from '$lib/assets/delete_me_later.png';
+	import dead_gadjah from '$lib/assets/elephant_trivia/dead-gadjah.jpeg';
+	import pregnant_elephant from '$lib/assets/elephant_trivia/pregnant-elephant.jpg';
+
+	interface triviaType {
+		assets: string;
+		title: string;
+		description: string;
+		author_name: string;
+		date: string;
+	}
+
+	const triviaContent: triviaType[] = [
+		{
+			assets: dead_gadjah,
+			title: 'Tragic Death of Beloved Elephant, Rahman, Sparks Outrage and Calls for Justice',
+			description:
+				'In a heartbreaking turn of events, the conservation community mourns the loss of yet another protected species. Rahman, a 46-year-old elephant who had captured the hearts of many ...',
+			author_name: 'Silvi',
+			date: 'January 23, 2024'
+		},
+		{
+			assets: pregnant_elephant,
+			title: 'Pregnant Sumatran Elephants: Never Take a Seat!',
+			description:
+				"Sumatran elephants indeed captivate with their unique size and charming appearance. But there's another interesting fact about this highly endangered mammal—Sumatran elephants have the longest pregnancy duration among mammals ...",
+			author_name: 'Silvi',
+			date: 'January 22, 2024'
+		}
+	];
 
 	const options: Options = {
 		rewind: true,
@@ -66,23 +94,25 @@
 	<!-- Right Side -->
 	<div class="w-full h-full lg:w-full lg:h-full mt-4">
 		<Splide {options} bind:this={slider}>
-			{#each [1, 2] as item, index (index + item)}
+			{#each triviaContent as item, index (index + item.title)}
 				<SplideSlide>
 					<div
 						class="md:w-[550px] md:h-[261px] lg:w-[820px] lg:h-[361px] flex flex-col md:flex-row items-center bg-white rounded-2xl"
 					>
 						<div class="hidden md:block w-full h-full">
-							<img class="w-full h-full object-fill" src={delete_me_later} alt="delete-me-later" />
+							<img
+								class="w-full h-full object-fill rounded-l-2xl"
+								src={item.assets}
+								alt={item.title}
+							/>
 						</div>
 						<div
 							class="w-full h-full p-4 flex flex-col items-start justify-between gap-4 font-grotesk"
 						>
-							<h5 class="text-lg lg:text-3xl font-medium">Elephants gonna be wild dude!</h5>
+							<h5 class="text-lg lg:text-3xl font-medium">{item.title}</h5>
 
-							<p class="text-xs lg:text-lg text-[#98A0A2]">
-								Coffee is the most popular drink in the world and drinking coffee in the morning has
-								become a routine for many people before their activities. Beside being considered to
-								be able to provide energy intake, it turns out that the ...
+							<p class="text-xs lg:text-base text-[#98A0A2]">
+								{item.description}
 							</p>
 
 							<div class="flex items-center justify-center gap-2">
@@ -91,8 +121,8 @@
 								></div>
 
 								<div class="flex flex-col items-start justify-center">
-									<h6 class="text-sm lg:text-md font-medium">Adam</h6>
-									<h6 class="text-xs lg:text-normal font-light text-[#98A0A2]">August 10, 2023</h6>
+									<h6 class="text-sm lg:text-md font-medium">{item.author_name}</h6>
+									<h6 class="text-xs lg:text-normal font-light text-[#98A0A2]">{item.date}</h6>
 								</div>
 							</div>
 						</div>
