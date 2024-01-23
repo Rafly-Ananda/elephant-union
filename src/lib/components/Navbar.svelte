@@ -11,7 +11,7 @@
 		</div>
 
 		<div
-			class="w-full h-full flex flex-col-reverse md:flex-row justify-center md:justify-end items-center gap-2 md:gap-5"
+			class="w-full h-full flex flex-col-reverse md:flex-row justify-center md:justify-end items-end md:items-center gap-2 md:gap-5"
 		>
 			<div class="font-grotesk flex flex-col items-end justify-center hover:cursor-pointer gap-1">
 				<p class=" text-[5px] md:text-[8px] bg-[#A53A4C] text-white px-1 rounded-xl">Coming Soon</p>
