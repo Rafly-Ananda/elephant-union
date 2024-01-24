@@ -23,7 +23,9 @@
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-graphik font-extrabold">We're Seen On</h1>
 	<div class="w-full h-full grid grid-cols-6 gap-2 lg:gap-10 mt-7 lg:mt-[75px]">
 		{#each were_seen_on_logo as item, index (item + index)}
-			<div class="flex items-center justify-center bg-[#e2e0d6] rounded-xl p-2 lg:p-10">
+			<div
+				class="flex items-center justify-center bg-[#e2e0d6] rounded-md md:rounded-xl p-2 lg:p-10"
+			>
 				<img src={item} alt={item} />
 			</div>
 		{/each}

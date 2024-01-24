@@ -1,43 +1,43 @@
 <script lang="ts">
 	// Our Friends Logos
-	import blok_blok from '$lib/assets/blok-blok.png';
-	import noah from '$lib/assets/noah.png';
-	import fkgi from '$lib/assets/fkgi.png';
-	import bri from '$lib/assets/bri.png';
-	import eiger from '$lib/assets/eiger.png';
-	import way_kambas from '$lib/assets/way-kambas.png';
-	import satwa from '$lib/assets/satwa.png';
-	import perkebunan_nusantara from '$lib/assets/perkebunan-nusantara.png';
-	import indonesia_ecotourism from '$lib/assets/indonesia-ecotourism.png';
-	import walini from '$lib/assets/walini.png';
-	import coinfolks from '$lib/assets/coinfolks.png';
-	import oxlabs from '$lib/assets/oxlabs.png';
-	import kuyou from '$lib/assets/kuyou.png';
-	import pertamina_ep from '$lib/assets/pertamina-ep.png';
-	import solar_generation from '$lib/assets/solar-generation.png';
-	import ggf from '$lib/assets/ggf.png';
-	import drezzo from '$lib/assets/drezzo.png';
-	import maja_labs from '$lib/assets/maja-labs.png';
+	import blok_blok from '$lib/assets/our_friends/blok-blok.png';
+	import noah from '$lib/assets/our_friends/noah.png';
+	import fkgi from '$lib/assets/our_friends/fkgi.png';
+	import bri from '$lib/assets/our_friends/bri.png';
+	import eiger from '$lib/assets/our_friends/eiger.png';
+	import way_kambas from '$lib/assets/our_friends/way-kambas.png';
+	import satwa from '$lib/assets/our_friends/satwa.png';
+	import perkebunan_nusantara from '$lib/assets/our_friends/perkebunan-nusantara.png';
+	import indonesia_ecotourism from '$lib/assets/our_friends/indonesia-ecotourism.png';
+	import walini from '$lib/assets/our_friends/walini.png';
+	import coinfolks from '$lib/assets/our_friends/coinfolks.png';
+	import oxlabs from '$lib/assets/our_friends/oxlabs.png';
+	import kuyou from '$lib/assets/our_friends/kuyou.png';
+	import pertamina_ep from '$lib/assets/our_friends/pertamina-ep.png';
+	import solar_generation from '$lib/assets/our_friends/solar-generation.png';
+	import ggf from '$lib/assets/our_friends/ggf.png';
+	import drezzo from '$lib/assets/our_friends/drezzo.png';
+	import maja_labs from '$lib/assets/our_friends/maja-labs.png';
 
 	const our_friends = [
-		drezzo,
-		maja_labs,
 		blok_blok,
-		noah,
-		fkgi,
-		bri,
-		eiger,
-		way_kambas,
-		satwa,
-		perkebunan_nusantara,
-		indonesia_ecotourism,
-		walini,
+		maja_labs,
 		coinfolks,
-		kuyou,
+		oxlabs,
+		fkgi,
+		way_kambas,
+		eiger,
 		pertamina_ep,
 		solar_generation,
 		ggf,
-		oxlabs
+		bri,
+		walini,
+		drezzo,
+		perkebunan_nusantara,
+		noah,
+		kuyou,
+		satwa,
+		indonesia_ecotourism
 	];
 </script>
 
@@ -47,7 +47,9 @@
 	<h1 class="text-2xl md:text-4xl lg:text-6xl font-graphik font-extrabold">Our Friends</h1>
 	<div class="w-full h-full grid grid-cols-6 gap-2 lg:gap-10 mt-5 lg:mt-[57px]">
 		{#each our_friends as item, index (item + index)}
-			<div class="flex items-center justify-center bg-[#e2e0d6] rounded-xl px-2">
+			<div
+				class="flex items-center justify-center bg-[#e2e0d6] rounded-md md:rounded-xl p-2 lg:p-8"
+			>
 				<img src={item} alt={item} />
 			</div>
 		{/each}

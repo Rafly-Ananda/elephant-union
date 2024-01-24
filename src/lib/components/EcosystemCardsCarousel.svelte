@@ -66,7 +66,7 @@
 					class="w-full flex items-start justify-center float-left absolute left-0 right-0 bottom-0 top-2/4"
 				>
 					<div
-						class="w-full h-full flex flex-col items-center justify-evenly font-grotesk z-10 text-white opacity-100 md:mt-[28px] pb-0 md:pb-10"
+						class="w-full h-full flex flex-col items-center justify-evenly font-grotesk z-10 text-white opacity-100 pb-0 md:pb-10 px-10"
 					>
 						<h5 class=" text-lg md:text-2xl font-bold tracking-[0.2px] md:leading-9">
 							{item.title}
@@ -76,9 +76,20 @@
 						</p>
 
 						<button
-							class="flex items-center justify-center border border-white font-grotesk text-xs md:text-2xl p-1 md:p-2 font-semibold md:leading-7 rounded-md md:rounded-lg md:mt-[33px]"
+							class="flex items-center justify-center border border-[#b3b2b3] font-grotesk text-xs md:text-2xl p-1 md:p-2 font-semibold md:leading-7 rounded-md md:rounded-lg md:mt-[33px] text-[#b3b2b3]"
 						>
-							Visit <img src={arrow_up_white} alt="arrow-up-right" />
+							Visit <svg
+								width="27"
+								height="27"
+								viewBox="0 0 27 27"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="fill-[#b3b2b3]"
+							>
+								<path
+									d="M7.02287 6.83471L7.02287 9.16283L16.2445 9.17108L6.1973 19.2183L7.84844 20.8694L17.8956 10.8222L17.8874 20.0439L20.232 20.0439V6.83471H7.02287Z"
+								/>
+							</svg>
 						</button>
 					</div>
 				</div>

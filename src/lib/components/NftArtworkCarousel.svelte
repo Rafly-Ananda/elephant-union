@@ -6,7 +6,6 @@
 	import arrow_right from '$lib/assets/arrow-right.png';
 
 	// NFT Artworks
-	import showcase_1 from '$lib/assets/nft_artwork/NFT-01.png';
 	import showcase_2 from '$lib/assets/nft_artwork/NFT-02.png';
 	import showcase_3 from '$lib/assets/nft_artwork/NFT-03.png';
 	import showcase_4 from '$lib/assets/nft_artwork/NFT-04.png';
@@ -21,14 +20,12 @@
 	import showcase_13 from '$lib/assets/nft_artwork/NFT-13.png';
 	import showcase_14 from '$lib/assets/nft_artwork/NFT-14.png';
 	import showcase_15 from '$lib/assets/nft_artwork/NFT-15.png';
-	import showcase_16 from '$lib/assets/nft_artwork/NFT-16.png';
 	import showcase_17 from '$lib/assets/nft_artwork/NFT-17.png';
 	import showcase_18 from '$lib/assets/nft_artwork/NFT-18.png';
 	import showcase_19 from '$lib/assets/nft_artwork/NFT-19.png';
 	import showcase_20 from '$lib/assets/nft_artwork/NFT-20.png';
 
 	let nft_artworks = [
-		showcase_1,
 		showcase_2,
 		showcase_3,
 		showcase_4,
@@ -43,7 +40,6 @@
 		showcase_13,
 		showcase_14,
 		showcase_15,
-		showcase_16,
 		showcase_17,
 		showcase_18,
 		showcase_19,
@@ -89,14 +85,14 @@
 </div>
 <div class="flex items-center justify-center gap-5">
 	<button
-		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer"
+		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer shadow-lg transform active:scale-75 transition-transform"
 		on:click={onArtworkCarouselClickAdvance}
 	>
 		<img class="w-2/4 object-none md:w-full" alt="arrow-left" src={arrow_left} />
 	</button>
 
 	<button
-		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer"
+		class="w-[46px] h-[46px] md:w-[56px] md:h-[56px] flex items-center justify-center bg-white rounded-full p-0 md:p-5 hover:cursor-pointer shadow-lg transform active:scale-75 transition-transform"
 		on:click={onArtworkCarouselClickBack}
 	>
 		<img class="w-2/4 object-none md:w-full" alt="arrow-right" src={arrow_right} />

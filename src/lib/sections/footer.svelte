@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { Modal } from '$lib';
+	import { openModal } from 'svelte-modals';
+
 	import elephant_union_logo_footer from '$lib/assets/elephant-union-logo-footer.png';
 
 	// Social Media Logos
@@ -12,7 +15,20 @@
 
 	let email = '';
 
-	const social_media_logos = [facebook, instagram, x, linkedin, youtube];
+	const social_media_logos = [instagram, x, linkedin, youtube];
+	const social_media_links = [
+		'https://www.instagram.com/elephantunion/',
+		'https://x.com/Elephant_Union',
+		'https://www.linkedin.com/company/elephantunion',
+		'https://www.youtube.com/@ElephantUnion'
+	];
+
+	function handleOpen(content: string) {
+		openModal(Modal, {
+			title: content,
+			message: content
+		});
+	}
 </script>
 
 <div
@@ -38,7 +54,9 @@
 
 			<ul class="flex flex-wrap gap-5 items-center justify-center lg:block pt-5">
 				{#each footer_info_nav as item, index (item + index)}
-					<li class="mt-0 md:mb-2"><a class="font-light text-[#b2b2b2]" href="#">{item}</a></li>
+					<li class="mt-0 md:mb-2">
+						<a class="font-light text-[#b2b2b2]" href="elephantunion.com">{item}</a>
+					</li>
 				{/each}
 			</ul>
 		</div>
@@ -87,19 +105,22 @@
 		<div
 			class="w-full flex items-center justify-center md:justify-start gap-4 text-xs lg:gap-10 lg:text-base"
 		>
-			<div class="flex flex-col w-full">
-				<span>&#169; 2024 Elephant Union.</span>
-				<span>All rights reserved.</span>
+			<div class="flex flex-col">
+				<span>&#169; 2024 Elephant Union. All rights reserved.</span>
 			</div>
 
-			<a href="#" class="underline">Privacy Policy</a>
-			<a href="#" class="underline">Terms and Conditions</a>
+			<button on:click={() => handleOpen('Privacy & Policy')} class="underline"
+				>Privacy Policy</button
+			>
+			<button on:click={() => handleOpen('Terms & Conditions')} class="underline"
+				>Terms and Conditions</button
+			>
 		</div>
 
 		<div>
 			<ul class="flex items-center justify-center gap-3">
 				{#each social_media_logos as item, index (item + index)}
-					<a href=""><img src={item} alt={item} /></a>
+					<a href={social_media_links[index]}><img src={item} alt={item} /></a>
 				{/each}
 			</ul>
 		</div>

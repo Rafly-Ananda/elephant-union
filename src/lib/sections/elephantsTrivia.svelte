@@ -7,6 +7,8 @@
 	import dead_gadjah from '$lib/assets/elephant_trivia/dead-gadjah.jpeg';
 	import pregnant_elephant from '$lib/assets/elephant_trivia/pregnant-elephant.jpg';
 
+	import team_silvi from '$lib/assets/team_silvi.png';
+
 	interface triviaType {
 		assets: string;
 		title: string;
@@ -116,9 +118,9 @@
 							</p>
 
 							<div class="flex items-center justify-center gap-2">
-								<div
-									class="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#C4C4C4]"
-								></div>
+								<div class="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#C4C4C4]">
+									<img class="rounded-full" src={team_silvi} alt={item.author_name + item.date} />
+								</div>
 
 								<div class="flex flex-col items-start justify-center">
 									<h6 class="text-sm lg:text-md font-medium">{item.author_name}</h6>
@@ -135,7 +137,7 @@
 	<div class="w-full flex items-center justify-center gap-5 mt-5 2xl:hidden">
 		<button
 			id="artwork-left-btn"
-			class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer"
+			class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer shadow-lg transform active:scale-75 transition-transform"
 			on:click={onArtworkCarouselClickAdvance}
 		>
 			<img alt="arrow-right" src={arrow_left} />
@@ -143,7 +145,7 @@
 
 		<button
 			id="artwork-right-btn"
-			class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer"
+			class="w-[56px] h-[56px] flex items-center justify-center bg-white rounded-full p-5 hover:cursor-pointer shadow-lg transform active:scale-75 transition-transform"
 			on:click={onArtworkCarouselClickBack}
 		>
 			<img alt="arrow-left" src={arrow_right} />

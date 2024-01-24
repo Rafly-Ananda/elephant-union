@@ -37,28 +37,33 @@
 			title: 'ART',
 			content: [
 				'1 Art Digital, NFT generated Elephant Union',
-				'Physical handmade art Elephant Union from elephant tusker canvas (Raffle), free shipphing to global address.'
+				'1 Physical handmade art Elephant Union from elephant tusker canvas, free shipphing to global address. (Raffle only)'
 			],
 			art: benefits_art
 		},
 		{
 			title: 'Economics',
-			content: ['Profit Sahre | House of Elephants @WayKambas 1 NFT = 0,001% (5 Years)'],
+			content: [
+				'Profit Share | House of Elephants @WayKambas, 1 NFT = 0,001% share, Distribution every 3 months',
+				'Alpha Call, collaboration with CoinFolks',
+				'Stake - Claim - Earn 20 $CEBB /day',
+				'Raffle acces every week (Free Trip, NFT, Whitelist, Airdrop, etc)'
+			],
 			art: benefits_economy
 		},
 		{
-			title: 'Privilege in Real Life',
+			title: 'In Real Life',
 			content: [
 				'Free Acces VIP Lounge at every House of Elephants (HoE)',
 				'Free Acces to all paid events whitin ecosystem & 20% discount for accomodation and FnB Elephant Union Ecosystem',
-				'Indonesian Trip (Raffle)',
-				'Africa Trip (Raffle)'
+				'1 Indonesian Trip (Raffle only)',
+				'1 Africa Trip (Raffle only)'
 			],
 			art: benefits_privillage
 		},
 		{
 			title: 'Virtual',
-			content: ['Avatar Character Elephant Union Members at Elephant Universe'],
+			content: ['Avatar Character Elephant Union  at Elephant Universe'],
 			art: benefits_virtual
 		},
 		{
@@ -176,11 +181,11 @@
 		</h4>
 		<div class="w-full h-full mt-10">
 			<div class="w-full h-full flex flex-col items-center justify-start relative">
-				<div class="w-full h-[95%] bottom-0 absolute">
+				<div class="w-full h-[95%] bottom-2 absolute">
 					<!-- Centered Child Div -->
 					<div
 						id="child"
-						class="w-[1px] h-full bg-gradient-to-r from-white to-[#8A8A8A] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						class="w-[2px] h-full bg-gradient-to-b from-white via-[#8A8A8A] to-[#464646] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 					></div>
 					<!-- End Line -->
 				</div>
@@ -274,17 +279,17 @@
 				>
 					<div class="absolute w-2/4 h-full left-0">
 						<div
-							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 right-0 transform -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-[#8A8A8A] absolute top-1/2 right-0 transform -translate-y-1/2"
 						></div>
 
 						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[65%] md:left-1/2 transform -translate-x-1/4 -translate-y-1/2"
+							class="w-[5px] h-[5px] bg-[#8A8A8A] rounded-full absolute top-1/2 left-[65%] md:left-1/2 transform -translate-x-1/4 -translate-y-1/2"
 						></div>
 
 						<div
 							class="w-[70%] md:w-2/4 h-full flex items-center justify-center absolute left-0 pr-2"
 						>
-							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+							<h3 class="text-xs text-[#8A8A8A] font-grotesk font-medium text-center lg:text-base">
 								Direct Actions for Elephants
 							</h3>
 						</div>
@@ -298,7 +303,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#8A8A8A] font-bold absolute top-1/2 left-[57%] transform -translate-y-1/2"
 					>
 						Chapter 3
 					</button>
@@ -313,16 +318,16 @@
 				>
 					<div class="absolute w-2/4 h-full right-0">
 						<div
-							class="w-2/6 md:w-2/4 h-[1px] bg-white absolute top-1/2 left-0 transform -translate-y-1/2"
+							class="w-2/6 md:w-2/4 h-[1px] bg-[#8A8A8A] absolute top-1/2 left-0 transform -translate-y-1/2"
 						></div>
 						<div
-							class="w-[5px] h-[5px] bg-white rounded-full absolute top-1/2 left-[35%] md:left-1/2 md:right-2/4 transform -translate-x-1/2 -translate-y-1/2"
+							class="w-[5px] h-[5px] bg-[#8A8A8A] rounded-full absolute top-1/2 left-[35%] md:left-1/2 md:right-2/4 transform -translate-x-1/2 -translate-y-1/2"
 						></div>
 
 						<div
 							class="w-[70%] md:w-2/4 h-full flex items-center justify-center absolute right-0 pl-2"
 						>
-							<h3 class="text-xs text-white font-grotesk font-medium text-center lg:text-base">
+							<h3 class="text-xs text-[#8A8A8A] font-grotesk font-medium text-center lg:text-base">
 								Exploring New Horizons
 							</h3>
 						</div>
@@ -336,7 +341,7 @@
 						/>
 					</button>
 					<button
-						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#00DF8E] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
+						class="hover:cursor-pointer text-xl leading-7 font-grotesk text-[#8A8A8A] font-bold absolute top-1/2 right-[57%] transform -translate-y-1/2"
 					>
 						Chapter 4
 					</button>
@@ -348,13 +353,11 @@
 			class="flex items-center flex-col md:flex-row justify-center mt-10 font-grotesk gap-0 md:gap-1"
 		>
 			<h4 class="text-[16px] font-light leading-7 text-white text-center">
-				We have Encyclopedia (Whitepaper) too,
-			</h4>
-
-			<h4 class="text-[16px] font-light leading-7 text-white text-center">
-				on <span class="font-bold text-[#00DF8E] underline"
+				We have Encyclopedia (Whitepaper) too, on <a
+					href="https://elephant-union.gitbook.io/encyclopedia/"
+					class="font-bold text-[#00DF8E] underline"
 					>GitBook <img class="inline-block" alt="arrow-up-icon" src={arrow_up_icon} />
-				</span>
+				</a>
 			</h4>
 		</div>
 	</div>

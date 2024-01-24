@@ -15,21 +15,23 @@
 </script>
 
 <div
-	class="w-full md:h-full lg:h-[80vh] flex flex-col items-center justify-start md:mt-20 bg-[#F3F6F5] lg:mt-[150px] py-10 px-6 md:px-[64px] 2xl:px-[290px] gap-10 lg:py-20"
+	class="w-full h-full flex flex-col items-center justify-start md:mt-20 bg-[#F3F6F5] lg:mt-[150px] py-10 px-6 md:px-[64px] 2xl:px-[290px] gap-10 lg:py-20"
 >
 	<h1 class="font-graphik text-2xl md:text-4xl lg:text-6xl font-extrabold">Updates</h1>
 
-	<div class="w-full flex flex-col lg:flex-row items-center bg-white rounded-2xl">
+	<div
+		class="w-full flex flex-col lg:flex-row items-center bg-white rounded-2xl lg:grid grid-cols-2"
+	>
 		<div class="w-full h-full">
 			<img
-				class="w-full h-full object-fill rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl"
+				class="w-full h-full object-cover rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl"
 				src={union_update_hero}
 				alt="delete-me-later"
 			/>
 		</div>
 
 		<!-- Navigations -->
-		<div class="w-full h-full flex flex-col items-start font-grotesk">
+		<div class="w-full flex flex-col items-start font-grotesk">
 			<div class="w-full py-4 flex items-center justify-evenly">
 				{#each updates_nav as item, index (item + index)}
 					<div class="">
