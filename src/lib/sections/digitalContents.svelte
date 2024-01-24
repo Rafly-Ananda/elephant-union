@@ -5,10 +5,10 @@
 </script>
 
 <div
-	class="w-full h-full flex flex-col xl:flex-row items-start justify-center gap-5 mt-[50px] md:mt-[100px] lg:mt-[155px] px-6 xl:px-[64px] 2xl:px-[290px] lg:grid grid-cols-3"
+	class="w-full h-full flex flex-col xl:flex-row items-start justify-center gap-5 mt-[50px] md:mt-[100px] lg:mt-[155px] px-6 xl:px-[64px] 2xl:px-[290px] lg:grid lg:grid-cols-3 grid-rows-1"
 >
 	<!-- Left Side -->
-	<div class="flex flex-col flex-none items-start justify-start w-full h-full gap-4">
+	<div class="flex flex-col flex-none items-start justify-start w-full h-full gap-4 col-span-1">
 		<div
 			class="w-full h-full flex flex-col items-center justify-between bg-[#FFD1DC] p-5 rounded-2xl gap-5"
 		>
@@ -36,7 +36,6 @@
 			</div>
 
 			<!-- Spotify Player -->
-
 			<div class="w-full">
 				<iframe
 					title="spotify-gadjah-whispers-podcast-player"
