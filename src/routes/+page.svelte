@@ -31,6 +31,7 @@
 	let i = 0;
 	let j = 0;
 	let currentWord = '';
+	let typeWriterTextContent = '';
 
 	const scrollIntoView = (sectionId: string) => {
 		const el = document.querySelector(`#${sectionId}`);
@@ -42,13 +43,8 @@
 
 	const typeWriterFnc = () => {
 		currentWord = words[i];
-		const typewriterElement = document.getElementById('typewriter');
-
-		if (typewriterElement !== null) {
-			typewriterElement.textContent = currentWord.substring(0, j + 1);
-			j++;
-		}
-
+		typeWriterTextContent = currentWord.substring(0, j + 1);
+		j++;
 		setTimeout(typeWriterFnc, 100);
 	};
 
@@ -83,6 +79,8 @@
 			<h1
 				id="typewriter"
 				class="text-xl md:text-2xl lg:text-5xl font-bold text-center font-grotesk text-white"
+				contenteditable="true"
+				bind:textContent={typeWriterTextContent}
 			></h1>
 
 			<button
