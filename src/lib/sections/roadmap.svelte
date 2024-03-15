@@ -165,11 +165,13 @@
 					<p class="font-grotesk w-full text-xs">Listing on:</p>
 					<img alt="Algorand" class="w-full" src={algorand_logo} />
 				</div>
-				<button
-					class="p-5 md:px-10 py-3 bg-black opacity-30 rounded-lg font-bold font-grotesk md:text-lg transition ease-in-out delay-150 hover:scale-110 duration-300 mr-1 text-white"
+				<a href="https://algoxnft.com/shuffle/2525"
+					><button
+						class="p-5 md:px-10 py-3 bg-[#00df8e] rounded-lg font-bold font-grotesk md:text-lg transition ease-in-out delay-150 hover:scale-110 duration-300 mr-1 text-black"
+					>
+						Shuffle is Live!
+					</button></a
 				>
-					Mint Now
-				</button>
 			</div>
 		</div>
 	</div>
